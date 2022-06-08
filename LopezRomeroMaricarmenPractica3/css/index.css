@@ -1,0 +1,208 @@
+body{
+    margin: 0px auto;
+    font-family: Cambria;
+}
+
+.cabecera{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Times New Roman';
+    background-color: antiquewhite;
+    grid-area: my-header;
+}
+
+.cabecera a{
+    text-decoration: none;
+    color: chocolate;
+}
+
+.aside{
+    flex: 30px;
+    background-color: bisque;
+    text-align: center;
+    grid-area: my-aside;
+}
+
+.nav_menu{
+    grid-area: my-nav;
+}
+
+#m1{
+    background-color: azure;
+    list-style: none;
+    padding: 0;
+    margin: auto;
+}
+
+#m1 li a{
+    text-decoration: none;
+    margin-left: 150px;
+    color: darkgrey;
+    padding: 20px;
+    display: block;
+}
+
+#m1 li{
+    display: inline-block;
+    text-align: center;
+}
+
+#m1 li a:hover{
+    background-color: lemonchiffon;
+}
+
+#contenido{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section_contenido{
+    flex: 70%;
+    background-color: gainsboro;
+    grid-area: my-section;
+}
+
+#menu, #menu a, #enlace, #enlace a{
+    background-color: aliceblue;
+    text-decoration: none;
+    color: darkgoldenrod;
+}
+
+.pie_pagina{
+    background-color: beige;
+    width: 100%;
+    grid-area: my-footer;
+}
+
+.pie_pagina .parte1{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 50px;
+    padding: 20px 0px;
+}
+
+.pie_pagina .parte1 .box p{
+    color: grey;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.pie_pagina .parte1 .box a{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    color: darkgrey;
+}
+
+.pie_pagina .parte1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pie_pagina .parte1 .box figure img{
+    width: 70px;
+}
+
+.pie_pagina .parte2{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+div h1{
+    color: darkred;
+}
+div h2{
+    color: chocolate;
+}
+
+#form{
+    height: 150px;
+    float: left;
+    padding-left: 50px;
+    padding-right: 30px;
+}
+
+#titulo{
+    color: darkseagreen;
+    font-size: 20px;
+    text-align: center;
+}
+
+#parrafo1, #parrafo2{
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#img1, #img4{
+    float: right;
+    width: 300px;
+    padding-left: 30px;
+    padding-right: 15px;
+}
+
+#img2{
+    font-size: 19px;
+    padding-left: 150px;
+    color: darkred;
+    font-family: Cambria;
+}
+
+#img3{
+    font-size: 19px;
+    padding-top: 80px;
+    padding-left: 150px;
+    color: darkred;
+    font-family: Cambria;
+}
+
+li {
+    list-style-type: circle;
+}
+
+@media screen and (max-width:599px) {
+    .grid{
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 25px 1fr 50px;
+        grid-template-areas: "my-header"
+        "my-nav" "my-section" "my-aside" "my-footer";
+    }
+    .pie_pagina .parte1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+@media (min-width:600px) and (max-width:1000px){
+    .grid{
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 150px 50px 1fr 100px;
+        grid-template-areas: "my-header"
+        "my-nav my-nav" "my-section my-aside" "my-footer my-footer";
+    }
+    .pie_pagina .parte1{
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+@media(min-width:1001px){
+    .grid{
+        grid-template-columns: 1fr 200px;
+        grid-template-rows: 200px 150px 1fr 100px;
+        grid-template-areas: "my-header my-header"
+        "my-nav my-nav" "my-section my-aside" "my-footer my-footer";
+    }
+}
