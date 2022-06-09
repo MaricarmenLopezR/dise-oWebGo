@@ -16,59 +16,79 @@ div{
         left: 8rem;
     }
 
-    8%{
+    5%{
         left: 8rem;
         top: 4rem;
     }
 
-    16%{
+    10%{
         top:25rem;
     }
 
-    24%{
+    15%{
         left:8rem;
     }
 
-    32%{
+    20%{
         top: 25rem;
         left: 4rem;
     }
 
-    40%{
+    25%{
         top: 27rem;
         left:4rem;
     }
-    48%{
+    30%{
         top: 27rem;
         left: 27rem;        
     }
-    56%{
+    35%{
         top: 25rem;
         left: 27rem;
     }
 
-    64%{
+    40%{
         left: 26rem;
     }
-    72%{
+    45%{
         top: 21rem;
         left: 27rem;
     }
-    80%{
+    50%{
         top: 19rem;
         left: 27rem;
     }
 
-    88%{
+    55%{
         left: 23rem;
         top: 19rem;
     }
-    96%{
-        top: 4rem;
+    60%{
+        top: .5rem;
         left: 23rem;
+    }
+    65%{
+        left: 17rem;
+        top: .5rem;
+    }
+    70%{
+        top: 4rem;
+        left: 17rem;
+    }
+    75%{
+        left: 14rem;
+        top: 4rem;
+    }
+    80%{
+        top: .5rem;
+        left: 14rem;
+    }
+    85%{
+        left: 8rem;
+        top: .5rem;
     }
     100%{
         top: 4rem;
         left: 8rem;
-    }
+    } 
 }

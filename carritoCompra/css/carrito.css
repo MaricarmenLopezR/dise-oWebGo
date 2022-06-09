@@ -16,6 +16,19 @@ body{
     width: 39px;
 }
 
+.count_product{
+    position: absolute;
+    top: -24px;
+    right: -8px;
+    background-color: antiquewhite;
+    padding: 1px 6px;
+    border-radius: 50%;
+    color: red;
+    font-weight: 700;
+    font-family: system-ui;
+    line-height: 18px;
+}
+
 h1{
     text-align: center;
 }
@@ -176,6 +189,7 @@ ul{
     font-size: 22px;
     color: black;
 }
+
 
 .footer{
     margin-top: 40px;
