@@ -77,12 +77,9 @@ function carritoHTML() {
               </td>
          `;
          contenedorCarrito.appendChild(row);
-         actualizarPrecio()
     });
 
 }
-
-
 
 function vaciarCarrito() {
     while(contenedorCarrito.firstChild) {
