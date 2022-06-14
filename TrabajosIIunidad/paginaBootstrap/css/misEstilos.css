@@ -1,0 +1,48 @@
+html, body{
+    height: 100%;
+}
+
+#cover{
+    background: #222 url(../img/fondo1.jpg) center no-repeat;
+    background-size: 100%;
+    color: white;
+    height: 100%;
+    text-align: center;
+}
+
+#cover-texto{
+    width: 100%;
+}
+
+nav{
+    background-color: cornsilk;
+}
+
+aside{
+    height: 50px;
+}
+
+#carouselExampleIndicators{
+    width: fit-content;    
+}
+
+.card img{
+   height: 300px;
+}
+
+.card-group{
+    background-color: aliceblue;
+}
+
+.card-header{
+    color: steelblue;
+}
+
+.información{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.información h2{
+    color: cadetblue;
+}
