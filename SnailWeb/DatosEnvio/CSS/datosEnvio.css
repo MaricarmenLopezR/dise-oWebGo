@@ -361,6 +361,12 @@ section div a{
 .combox{
   width: 32%;
 }
+
+.section_parte1 input{
+  border-radius: 5px;
+}
+
+
   @media screen and (max-width: 999px) {
     
 
