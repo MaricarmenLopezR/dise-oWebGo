@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/compras.css">
+    <title>Compras</title>
+</head>
+
+<body>
+    <main class="container">
+        <ul class="nav nav-tabs justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="paginaconstruccion.html">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Compras</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="proyectos.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="paginaconstruccion.html">Nosotros</a>
+            </li>
+        </ul>
+        <header class="row">
+            <img id="logo" src="img/logo.png" alt="farmacia">
+            <h1>Farmacia XYZ</h1>
+            <img id="carrito" src="img/carrito.png" alt="carrito" href="#" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+            <img id="usuario" src="img/usuario.png" alt="">
+        </header>
+        <div class="card">
+            <div class="card-header" style="background-color: #e3f2fd">
+              Productos
+            </div>
+            <div class="card-body row" id="lista_producto" style="background-color: #faf9f9;">
+                <div class="row row-cols-1 row-cols-md-6">
+                    <div class="col">
+                        <div class="card text-center productos h-100">
+                            <img src="img/p2.png" class="card-img-top" alt="producto1">
+                            <div class="card-body info">
+                                <a href="#" class="agregar button button-primary u-full-width agregarCarrito" data-id="1">+</a>
+                                <h4><strong>Mascarilla KN95 - Caja 20 UN</strong></h4>
+                                <p class="precio">s/<span class="u-pull-right">16.00</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center productos h-100">
+                            <img src="img/p3.jpg" class="card-img-top" alt="producto2">
+                            <div class="card-body info">
+                                <a href="#" class="agregar button button-primary u-full-width agregarCarrito" data-id="2">+</a>
+                                <h4><strong>Panadol Antigripal NF Tableta</strong></h4>
+                                <p class="precio">s/<span class="u-pull-right">2.19</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center productos h-100">
+                            <img src="img/p4.jpg" class="card-img-top" alt="producto3">
+                            <div class="card-body info">
+                                <a href="#" class="agregar button button-primary u-full-width agregarCarrito" data-id="3">+</a>
+                                <h4><strong>Vick-Vaporub Unguento tópico</strong></h4>
+                                <p class="precio">s/<span class="u-pull-right">12.80</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center productos h-100">
+                            <img src="img/p5.jpg" class="card-img-top" alt="producto4">
+                            <div class="card-body info">
+                                <a href="#" class="agregar button button-primary u-full-width agregarCarrito" data-id="4">+</a>
+                                <h4><strong>Abrilar jarabe</strong></h4>
+                                <p class="precio">s/<span class="u-pull-right">33.90</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center productos h-100">
+                            <img src="img/p6.jpg" class="card-img-top" alt="producto5">
+                            <div class="card-body info">
+                                <a href="#" class="agregar button button-primary u-full-width agregarCarrito" data-id="5">+</a>
+                                <h4><strong>Nastiflu tableta</strong></h4>
+                                <p class="precio">s/<span class="u-pull-right">1.07</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center productos h-100">
+                            <img src="img/p7.jpg" class="card-img-top" alt="producto6">
+                            <div class="card-body info">
+                                <a href="#" class="agregar button button-primary u-full-width agregarCarrito" data-id="6">+</a>
+                                <h4><strong>Vick-44 jarabe</strong></h4>
+                                <p class="precio">s/<span class="u-pull-right">16.20</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row seccion" id="lista_producto">
+            <aside class="col-md-4 col-sm-12">
+                <div class="card">
+                    <div class="card-header" style="background-color: #f6fff8;">
+                      Carrito de compra
+                    </div>
+                    <div class="card-body">
+                        <div id="carrito_compra">
+                            <table id="lista_carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <li class="btn_total list-group-item list-group-item-info" style="background-color: #f6fff8"><h2 id="total">Total: <strong> s/. <span id="priceTotal"></span></strong></h2></li>
+                    </div>
+                </div>
+            </aside>
+            <section class="compra col-md-6 col-sm-12">
+                <div class="field field1">
+                    <label for="Nombre">Nombre y Apellidos</label>
+                    <input id="nombres" class="control" type="text" name="apellido" placeholder="Nombre y Apellidos"> 
+                </div>
+                <div class="field">
+                    <label for="Email">Email</label>
+                    <input id="email" class="control" type="email" name="emial" placeholder="Email">
+                </div>
+                <div class="boton">
+                    <input type="submit" onclick="capturarDato()" value="Enviar compra" data-bs-toggle="modal" 
+                    data-bs-target="#exampleModal2"><br>
+                    <a href="#" id="vaciar_carrito">Vaciar Carrito</a>
+                </div>
+            </section>
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Compra registrada</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body total_compra">
+                      <p id="dato"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <footer class="row text-center text-lg-start text-white">
+            <div class="container p-4 pb-0">
+                <section class="">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                Farmacia XYZ
+                            </h6>
+                            <p>
+                                Es una línea de boticas que ofrece una gran variedad de productos farmacéuticos,
+                                perfumería y tocador, considerados de buena calidad.
+                            </p>
+                        </div>
+                        <hr class="w-100 clearfix d-md-none" />
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contactanos</h6>
+                            <p><i class="fas fa-home mr-3"></i> Los sauces #321</p>
+                            <p><i class="fas fa-envelope mr-3"></i> farmaciaxyz@gmail.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> + 51 234 567 88</p>
+                            <p><i class="fas fa-print mr-3"></i> + 51 234 567 89</p>
+                        </div>
+                        <hr class="w-100 clearfix d-md-none" />
+                        <hr class="w-100 clearfix d-md-none" />
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Redes Sociales</h6>
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!"
+                                role="button"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
+                                role="button"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!"
+                                role="button"><i class="fab fa-google"></i></a>
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!"
+                                role="button"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!"
+                                role="button"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!"
+                                role="button"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <img class="mapa" src="img/mapa.jfif" alt="mapa">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">Maricarmen López Romero</a>
+            </div>
+        </footer>
+    </main>
+    <script src="js/compra.js"></script>
+    <script src="js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8736019b27.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
