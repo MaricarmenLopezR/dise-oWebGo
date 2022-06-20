@@ -20,11 +20,10 @@ function guardarDato() {
     document.getElementById("sexo").value = "";
     alert("Datos guardados correctamente");
     actualizarDatos();
-
 }
 
-function recuperarDato(){
-    var nombre=document.getElementById("nombre").value;
+function recuperarDato() {
+    var nombre = document.getElementById("nombre").value;
     var valor=JSON.parse(localStorage.getItem(nombre));
     document.getElementById("nombre").value=nombre;
     document.getElementById("movil").value= valor.movil;
@@ -37,13 +36,11 @@ function eliminarDatos() {
     var nombre = document.getElementById("nombre").value;
     localStorage.removeItem(nombre);
     actualizarDatos();
-    alert("Datos eliminados correctamente");
 }
 
 function eliminarTodo() {
     localStorage.clear();
     actualizarDatos();
-    alert("Lista vacía");
 }
 
 function actualizarDatos() {
@@ -53,11 +50,11 @@ function actualizarDatos() {
     } else {
         for (var i=0; i <= localStorage.length -1; i++) {
             var key = localStorage.key(i);
-            var datos_registrados=JSON.parse(localStorage.getItem(key));
+            var datos_registrado=JSON.parse(localStorage.getItem(key));
             registro += '<li>' + '<span class= "nom">' + key + '</span>'
-            + '<span class="nom">' + datos_registrados.movil + '</span>' + '<span class="nom">' 
-            + datos_registrados.email + '</span>' + '<span class="nom">' + datos_registrados.direccion + '</span>' +
-            '<span class="nom">' + datos_registrados.sexo + '</span>' +
+            + '<span class="nom">' + datos_registrado.movil + '</span>' + '<span class="nom">' 
+            + datos_registrado.email + '</span>' + '<span class="nom">' + datos_registrado.direccion + '</span>' +
+            '<span class="nom">' + datos_registrado.sexo + '</span>' +
             '</li><br>';
         }
     }

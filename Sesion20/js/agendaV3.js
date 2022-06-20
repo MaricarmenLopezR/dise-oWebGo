@@ -1,42 +1,42 @@
-function guardarDato() {
-    var nombre = document.getElementById("nombre").value;
-    var movil = document.getElementById("movil").value;
-    var email  = document.getElementById("email").value;
+function guardarDatos() {
+    var nombre = document.getElementById('nombres').value;
+    var movil = document.getElementById('movils').value;
+    var email  = document.getElementById('emails').value;
     //-----------------------//
     var datos={
-        'movil': movil,
-        'email':email,
+        'movils': movil,
+        'emails':email,
     };
     //-----------------------//
     localStorage.setItem(nombre, JSON.stringify(datos));
-    document.getElementById("nombre").value = "";
-    document.getElementById("movil").value = "";
-    document.getElementById("email").value = "";
+    document.getElementById('nombres').value = "";
+    document.getElementById('movils').value = "";
+    document.getElementById('emails').value = "";
     
-    actualizarDatos();
+    actualizarDatoss();
 
 }
 
-function recuperarDato(){
-    var nombre=document.getElementById("nombre").value;
+function recuperarDatos(){
+    var nombre=document.getElementById('nombres').value;
     var valor=JSON.parse(localStorage.getItem(nombre));
-    document.getElementById("nombre").value=nombre;
-    document.getElementById("movil").value= valor.movil;
-    document.getElementById("email").value= valor.email;
+    document.getElementById('nombres').value=nombre;
+    document.getElementById('movils').value= valor.movil;
+    document.getElementById('emails').value= valor.email;
 }
 
-function eliminarDatos() {
-    var nombre = document.getElementById("nombre").value;
+function eliminarDatoss() {
+    var nombre = document.getElementById('nombres').value;
     localStorage.removeItem(nombre);
-    actualizarDatos();
+    actualizarDatoss();
 }
 
-function eliminarTodo() {
+function eliminarTodos() {
     localStorage.clear();
     actualizarDatos();
 }
 
-function actualizarDatos() {
+function actualizarDatoss() {
     var registro="";
     if (localStorage.length ===0) {
         registro += '<li>Vacío</li>';
