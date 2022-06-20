@@ -1,0 +1,23 @@
+.logo_proyecto{
+    width: 400px;
+    float: left;
+    padding: 0px;
+}
+
+section{
+    height: 450px;
+}
+.card{
+    width: 300px;
+}
+
+.titulo_1{
+    font-size: 40px;
+    font-family: 'Times New Roman';
+    text-align: center;
+    color: antiquewhite;
+}
+
+.card-img-top{
+    height: 200px;
+}

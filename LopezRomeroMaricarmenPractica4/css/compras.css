@@ -2,15 +2,21 @@ html, body {
     margin: 0;
     padding: 0;
     min-height: 100%;
+    font-family: 'Times New Roman';
 }
-
 
 .container {
     margin: 0 auto;
     padding: 0 1.5em; 
 }
 
-
+.shop-item-title{
+    padding-bottom: 5px;
+}
+.shop-item-price{
+    font-size: 20px;
+    color: #333;
+}
 
 .btn {
     text-align: center;
@@ -18,9 +24,6 @@ html, body {
     padding: .67em .67em;
     cursor: pointer;
 }
-
-
-
 
 .btn-primary {
     color: white;
@@ -34,28 +37,10 @@ html, body {
     background-color: blue;
 }
 
-
-
-.card {
-    margin: 30px;
-}
-
-
-
-
-.card img {
-    height: 150px;
-}
-
 #carro{
     width: 850px;
     float: left;
 }
-
-
-
-
-
 
 .cart-header {
     font-weight: bold;
@@ -153,8 +138,28 @@ html, body {
     font-size: 1.1em;
 }
 
+.col{
+    padding: 10px;
+}
 
+.shop-item-image{
+    height: 140px;
+}
 
+.tit_space{
+    font-size: 20px;
+    color: #333;
+    font-family: 'Times New Roman';
+}
 
+.t_space{
+    color: #CC4C4C;
+}
 
+.stiles{
+    background-color: #cbf3f0;
+}
 
+.stiles_2{
+    background-color: #2ec4b6;
+}
