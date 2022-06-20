@@ -250,6 +250,7 @@ header{
     bottom: -8px;
     transition: 0.5s;
     border-radius: 4px;
+    top: 45px;
   }
   
   
@@ -317,7 +318,10 @@ header{
   color: #fff;
  }
  
-  
+ .collapse ul li .tg:hover{
+  color: var(--botonesvolver);
+ } 
+
   @media screen and (max-width: 999px) {
     
 

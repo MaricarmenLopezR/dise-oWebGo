@@ -83,8 +83,8 @@
                 </div>
             </div>
         </header>
-        <hr>
-        <nav class="container navbar navbar-expand-lg">
+        <hr style="margin-top: 0;">
+        <nav class="container navbar navbar-expand-lg sticky-top bg-white">
           <div class="container-fluid">
             
             <a class="navbar-brand" href="#">Menu</a>
@@ -96,7 +96,7 @@
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item dropdown">
                   <div class="caja">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle tg" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="fa-solid fa-bars"></i>
                       Todos las Categorias
                       </a>
@@ -180,26 +180,27 @@
         <section class="section">
           <div id="seccion">
             <a>1. Carrito</a>
+            <span class="circulo"></span>
             <a>2. Datos de envío</a>
             <a>3. Opciones de pago</a>
           </div>
           <hr>
           <div class="section_contenido">
             <div class="section_parte1">
-              <h2>Información de contacto</h2>
+              <h2 class="contacto">Información de contacto <a href="#" class="sesion">¿Ya tienes cuenta? Inicia sesión</a></h2>
               <input class="controls" type="text" name="email" placeholder="micorreo@dominio.com">
               <input type="checkbox" name="confirmacion" value="11">Enviarme novedades y orfertas a mi correo
-              <h2>Datos de envio</h2>
+              <h2 class="envio">Datos de envio</h2>
               <input class="control lineacion" type="text" name="nombre" placeholder="Nombre"> 
               <input class="control" type="text" name="apellido" placeholder="Apellido">
               <input class="controls" type="text" name="dni" placeholder="Dni/Pasaporte/Nro Documento">
               <input class="controls" type="text" name="domicilio" placeholder="Domicilio">
               <input class="controls" type="text" name="referencia" placeholder="Referencia (opcional)">
-              <select class="combox lineacion" name="departamento" id="Departamento">
+              <select class="combox lineacion espace" name="departamento" id="Departamento">
                 <option value="">Departamento</option>
                 <option value=""></option>
               </select>
-              <select class="combox lineacion" name="ciudad" id="Ciudad">
+              <select class="combox lineacion espace" name="ciudad" id="Ciudad">
                 <option value="">Ciudad</option>
                 <option value=""></option>
               </select>
@@ -207,23 +208,19 @@
                 <option value="">Distrito</option>
                 <option value=""></option>
               </select>
-              <br>
               <input class="control lineacion" type="text" name="telefono" placeholder="Teléfono">
               <input class="control" type="text" name="codigo" placeholder="Cod. postal">
-              <br>
-              <input type="checkbox" name="confirmacion" value="11">Enviarme novedades y orfertas a mi correo
-              <br>
-              <a href="">Continuar</a>
-              <a href="">Volver al carrito</a>
+              <input class="controles" type="checkbox" name="confirmacion" value="11">Enviarme novedades y orfertas a mi correo
+              <a href="" class="botones btn_space btn_1">Continuar</a>
+              <a href="" class="botones btn_2">Volver al carrito</a>
             </div>
             <div class="section_parte2">
               <h2>Resumen</h2>
-              <a href="">Código de descuento</a>
-              <a href="">Usar</a>
-              <br>
-              <h3>Sub total:</h3>
-              <h3>Envio:</h3>
-              <h3>Total: </h3>
+              <input class="resumen codigo" type="text" name="descuento" placeholder="Código Descuento">
+              <a href="" class="resumen usar">Usar</a>
+              <h3 class="subtotal">Sub total: <span class="parte2">S/. </span></h3>
+              <h3>Envio: <span class="parte_2">S/. </span></h3>
+              <h3 class="total">Total: <span class="parte_2">S/. </span> </h3>
             </div>
           </div>
         </section>

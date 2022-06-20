@@ -348,10 +348,14 @@ section div a{
 
 .controls{
   width: 100%;
+  margin: 0.5rem 0;
+  padding: 5px 8px;
 }
 
 .control{
   width: 49%;
+  margin: 0.5rem 0;
+  padding: 5px 8px;
 }
 
 .lineacion{
@@ -360,12 +364,117 @@ section div a{
 
 .combox{
   width: 32%;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--rosa);
+  padding: 5px 8px;
+  border: none;
 }
 
 .section_parte1 input{
-  border-radius: 5px;
+  border-radius: 10px;
+  border: none;
 }
 
+.sesion{
+  font-size: 12px;
+  margin-left: 210px;
+}
+
+.envio{
+  margin: 1rem 0;
+}
+
+.espace{
+  margin-right: 8px;
+}
+
+.botones{
+  font-size: 18px;
+  margin-left: 0px;
+}
+
+.btn_space{
+  margin-right: 320px;
+}
+
+.controles{
+  margin-bottom: 40px;
+}
+
+.btn_1, .usar{
+  background: var(--botones);
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  width: 120px;
+  height: 30px;
+  border: none;
+}
+
+.btn_2, .codigo{
+  background-color: var(--botonesvolver);
+  color: white;
+  text-align: center;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+.section_parte1 input{
+  background-color: var(--rosa);
+}
+
+::placeholder{
+  color: white;
+}
+
+.section_parte2 h2{
+  font-size: 20px;
+  border-bottom: 1px solid;
+  margin-right: 80px;
+}
+
+.resumen{
+  font-size: 18px;
+  margin-left: 0px;
+}
+
+.codigo{
+  margin-right: 160px;
+  background-color: var(--rosa);
+  border: none;
+}
+
+.subtotal{
+  border-top: 1px solid;
+  margin-right: 80px;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+.section_parte2 h3{
+  font-size: 20px;
+}
+
+.total{
+  border-top: 1px solid;
+  margin-right: 80px;
+  padding-top: 10px;
+}
+
+.parte2{
+  margin-left: 300px;
+}
+
+.parte_2{
+  margin-left: 330px;
+}
+
+.circulo{
+  
+}
 
   @media screen and (max-width: 999px) {
     
