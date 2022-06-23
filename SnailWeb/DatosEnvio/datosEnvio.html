@@ -196,18 +196,17 @@
               <input class="controls" type="text" name="dni" placeholder="Dni/Pasaporte/Nro Documento">
               <input class="controls" type="text" name="domicilio" placeholder="Domicilio">
               <input class="controls" type="text" name="referencia" placeholder="Referencia (opcional)">
-              <select class="combox lineacion espace" name="departamento" id="Departamento">
-                <option value="">Departamento</option>
-                <option value=""></option>
-              </select>
-              <select class="combox lineacion espace" name="ciudad" id="Ciudad">
-                <option value="">Ciudad</option>
-                <option value=""></option>
-              </select>
-              <select class="combox" name="distrito" id="distrito">
-                <option value="">Distrito</option>
-                <option value=""></option>
-              </select>
+              <form name="formulario1" action="#">
+                <select class="combox lineacion espace" name="departamento" id="departamento">
+                  <option value="departamento">Departamento</option>
+                </select>
+                <select class="combox lineacion espace" name="ciudad" id="ciudad">
+                  <option value="ciudad">Ciudad</option>
+                </select>
+                <select class="combox" name="distrito" id="distrito">
+                  <option value="distrito">Distrito</option>
+                </select>
+              </form>
               <input class="control lineacion" type="text" name="telefono" placeholder="Teléfono">
               <input class="control" type="text" name="codigo" placeholder="Cod. postal">
               <input class="controles" type="checkbox" name="confirmacion" value="11">Enviarme novedades y orfertas a mi correo
@@ -262,6 +261,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="JS/datosEnvio.js"></script>
+    <script src="JS/combox.js"></script>
     <script src="https://kit.fontawesome.com/0ea696cd02.js" crossorigin="anonymous"></script>
 </body>
 </html>
