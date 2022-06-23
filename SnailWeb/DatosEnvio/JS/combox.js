@@ -3,9 +3,22 @@ var ciudad = document.getElementById('ciudad')
 var distrito = document.getElementById('distrito')
 
 var departamentos = ['Departamento','Amazonas', 'Cajamarca', 'Cusco', 'Lambayeque', 'Lima']
-var ciudades = ['Ciudad','Chachapoyas', 'Bongará', 'Bagua', 'Luya', 
-'Castilla']
-var distritos = ['Distrito','Imperial', 'San Vicente', 'Asia', 'Mala', 'Pacaraos', 'Sumbilca', 'Aucallama', 'Andahua', 'Ayo']
+var ciudades = ['Ciudad','Chachapoyas', 'Bongará', 'Bagua', 'Luya', 'Ciudad',
+'Cajamarca', 'Jaén', 'Chota', 'Cutervo', 'Ciudad','Cusco', 'Espinar', 'Paucartambo', 'Urubamba', 'Ciudad', 
+'Chiclayo', 'Lambayeque', 'Ferreñafe', 'Ciudad', 'Barranca', 'Huaral', 'Huarochirí', 'Lima']
+var distritos = ['Distrito','Asunción', 'Balsas', 'Chachapoyas', 'Cheto', 'Granada', 
+'Distrito', 'Chisquilla', 'Florida', 'Jumbilla', 'San Carlos', 'Valera', 'Distrito', 
+'Aramango', 'Bagua', 'Copallín', 'El Parco', 'Imaza', 'Distrito', 'Cocabamba', 'Conila', 
+'Lámud', 'Longuita', 'Ocumal', 'Distrito', 'Cajamarca', 'Chetilla', 'Cospán', 'Magdalena', 'Matara',
+'Distrito', 'Bellavista', 'Chontalí', 'Colasay', 'Huabal', 'Jaén', 'Distrito', 'Chota', 'Llama', 'Querocoto', 
+'Tacambamba', 'Tocmoche', 'Distrito', 'Cutervo', 'Pimpingos', 'Querocotillo', 'Santa Cruz', 'Socota', 
+'Distrito','Ccorca', 'Cusco', 'Poroy', 'Distrito','Condoroma', 'Espinar', 'Ocoruro', 'Pallpata', 'Pichigua',
+'Distrito', 'Caicay', 'Huancarani', 'Kosñipata', 'Paucartambo', 'Distrito', 'Chinchero', 'Hayllabamba', 
+'Urubamba', 'Yucay', 'Distrito', 'Chiclayo', 'José Leonardo Ortiz', 'La Victoria', 'Pimentel', 'Santa Victoria',
+'Distrito', 'Illimo', 'Mochumí', 'Olmos', 'Pacora', 'Túcume', 'Distrito', 'Pítipo', 'Ferreñafe', 'Incahuasi', 
+'Kañaris', 'Distrito', 'Barranca', 'Paramonga', 'Supe', 'Distrito', 'Huaral', 'Ihuari', 'Lampian', 'Pacaraos', 
+'Sumbilca', 'Distrito', 'Cuenca', 'Huarochirí', 'Langa', 'San Bartolomé', 'San Damian', 'Distrito',
+'Barranco', 'Comas', 'La Molina', 'La Victoria', 'Lima']
 
 function mostrarLugares(arreglo, lugar) {
     var elementos = '';
@@ -32,98 +45,62 @@ departemento.addEventListener('change', function() {
             recortar(ciudades, 0, 5, ciudad)
         break
         case 'Cajamarca':
-            recortar(ciudades, 2, 3, ciudad)
+            recortar(ciudades, 5, 10, ciudad)
         break
-        case 'Cajamarca':
-            recortar(ciudades, 2, 3, ciudad)
+        case 'Cusco':
+            recortar(ciudades, 10, 15, ciudad)
         break
-        case 'Cajamarca':
-            recortar(ciudades, 2, 3, ciudad)
+        case 'Lambayeque':
+            recortar(ciudades, 15, 19, ciudad)
         break
-        case 'Cajamarca':
-            recortar(ciudades, 2, 3, ciudad)
+        case 'Lima':
+            recortar(ciudades, 19, 24, ciudad)
         break
     }
 
-    $distrito.innerHTML = ''
+    distrito.innerHTML = ''
 })
 
-$provincia.addEventListener('change', function() {
-    let valor = $provincia.value
+ciudad.addEventListener('change', function() {
+    var valor = ciudad.value
 
-    if(valor == 'Cañete') {
-        recortar(distritos, 0, 4, $distrito)
+    if(valor == 'Chachapoyas') {
+        recortar(distritos, 0, 6, distrito)
+    } else if(valor == 'Bongará') {
+        recortar(distritos, 6, 12, distrito)
+    } else if(valor == 'Bagua') {
+        recortar(distritos, 12, 18, distrito)
+    } else if(valor == 'Luya') {
+        recortar(distritos, 18, 24, distrito)
+    } else if(valor == 'Cajamarca') {
+        recortar(distritos, 24, 30, distrito)
+    } else if(valor == 'Jaén') {
+        recortar(distritos, 30, 36, distrito)
+    } else if(valor == 'Chota') {
+        recortar(distritos, 36, 42, distrito)
+    } else if(valor == 'Cutervo') {
+        recortar(distritos, 42, 48, distrito)
+    } else if(valor == 'Cusco') {
+        recortar(distritos, 48, 52, distrito)
+    } else if(valor == 'Espinar') {
+        recortar(distritos, 52, 58, distrito)
+    } else if(valor == 'Paucartambo') {
+        recortar(distritos, 58, 63, distrito)
+    } else if(valor == 'Urubamba') {
+        recortar(distritos, 63, 68, distrito)
+    } else if(valor == 'Chiclayo') {
+        recortar(distritos, 68, 74, distrito)
+    } else if(valor == 'Lambayeque') {
+        recortar(distritos, 74, 80, distrito)
+    } else if(valor == 'Ferreñafe') {
+        recortar(distritos, 80, 85, distrito)
+    } else if(valor == 'Barranca') {
+        recortar(distritos, 85, 89, distrito)
     } else if(valor == 'Huaral') {
-        recortar(distritos, 4, 7, $distrito)
+        recortar(distritos, 89, 95, distrito)
+    } else if(valor == 'Huarochirí') {
+        recortar(distritos, 95, 101, distrito)
     } else {
-        recortar(distritos, 7, 9, $distrito)
+        recortar(distritos, 101, 107, distrito)
     }
 })
-
-// var opt_1 = new Array("-", "Chachapoyas", "Bongará", "Bagua", "Luya");
-// var opt_2 = new Array("-", "Cajamarca", "Jaén", "Chota", "Cutervo");
-// var opt_3 = new Array("-", "Cusco", "Espinar", "Paucartambo", "Urubamba");
-// var opt_4 = new Array("-", "Chiclayo", "Lambayeque", "Ferreñafe");
-// var opt_5 = new Array("-", "Barranca", "Huaral", "Huarochirí", "Lima");
-
-// var dto_1 = new Array("-", "Asunción", "Balsas", "Chachapoyas", "Cheto", "Granada");
-// var dto_2 = new Array("-", "Chisquilla", "Florida", "Jumbilla", "San Carlos", "Valera");
-// var dto_3 = new Array("-", "Aramango", "Bagua", "Copallín", "El Parco", "Imaza");
-// var dto_4 = new Array("-", "Cocabamba", "Conila", "Lámud", "Longuita", "Ocumal");
-
-// var ctp_1 = new Array("-", "Cajamarca", "Chetilla", "Cospán", "Magdalena", "Matara");
-// var ctp_2 = new Array("-", "Bellavista", "Chontalí", "Colasay", "Huabal", "Jaén");
-// var ctp_3 = new Array("-", "Chota", "Llama", "Querocoto", "Tacambamba", "Tocmoche");
-// var ctp_4 = new Array("-", "Cutervo", "Pimpingos", "Querocotillo", "Santa Cruz", "Socota");
-
-// var ptp_1 = new Array("-", "Ccorca", "Cusco", "Poroy");
-// var ptp_2 = new Array("-", "Condoroma", "Espinar", "Ocoruro", "Pallpata", "Pichigua");
-// var ctp_3 = new Array("-", "Caicay", "Huancarani", "Kosñipata", "Paucartambo");
-// var ctp_4 = new Array("-", "Chinchero", "Hayllabamba", "Urubamba", "Yucay");
-
-// var btp_1 = new Array("-", "Chiclayo", "José Leonardo O.", "La Victoria", "Pimentel", "Santa Victoria");
-// var btp_2 = new Array("-", "Illimo", "Mochumí", "Olmos", "Pacora", "Túcume");
-// var btp_3 = new Array("-", "Pítipo", "Ferreñafe", "Incahuasi", "Kañaris");
-
-// var atp_1 = new Array("-", "Barranca", "Paramonga", "Supe");
-// var atp_2 = new Array("-", "Huaral", "Ihuari", "Lampian", "Pacaraos", "Sumbilca");
-// var atp_3 = new Array("-", "Cuenca", "Huarochirí", "Langa", "San Bartolomé", "San Damian");
-// var atp_4 = new Array("-", "Barranco", "Comas", "La Molina", "La Victoria", "Lima");
-
-// function cambiarCiudad() {
-//     var objeto;
-//     objeto = document.formulario1.departamento[document.formulario1.departamento.selectedIndex].value;
-//     if (objeto!=0) {
-//         mis_pts=eval("opt_" + objeto);
-//         num_opts= mis_pts.length;
-//         document.formulario1.ciudad.length = num_opts;
-//         for (i = 0; i < num_opts; i++) {
-//             document.formulario1.ciudad.options[i].value = mis_pts[i];
-//             document.formulario1.ciudad.options[i].text = mis_pts[i];            
-//         }
-//     }else{
-//         document.formulario1.ciudad.length=1;
-//         document.formulario1.ciudad.options[0].value="-";
-//         document.formulario1.ciudad.options[0].text = "-";
-//     }
-//     document.formulario1.ciudad.options[0].selected = true;
-// }
-
-// function cambiarDistrito() {
-//     var dist;
-//     dist = document.formulario1.ciudad[document.formulario1.ciudad.selectedIndex].value;
-//     if (dist!=0) {
-//         mis_dto=eval("dto_" + dist);
-//         num_dtos= mis_dto.length;
-//         document.formulario1.distrito.length = num_dtos;
-//         for (i = 0; i < num_dtos; i++) {
-//             document.formulario1.distrito.options[i].value = mis_dto[i];
-//             document.formulario1.distrito.options[i].text = mis_dto[i];            
-//         }
-//     }else{
-//         document.formulario1.distrito.length=1;
-//         document.formulario1.distrito.options[0].value="-";
-//         document.formulario1.distrito.options[0].text = "-";
-//     }
-//     document.formulario1.distrito.options[0].selected = true;
-// }
