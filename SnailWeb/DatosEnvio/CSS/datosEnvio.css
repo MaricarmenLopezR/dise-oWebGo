@@ -323,11 +323,15 @@ color: #fff;
 }
   
 /*Section*/
-section div a{
+.seccion_1 a{
   text-decoration: none;
   font-size: 20px;
   color: black;
   margin-left: 230px;
+}
+
+.sector{
+  padding-bottom: 20px;
 }
 
 .section .section_contenido{
@@ -380,6 +384,8 @@ section div a{
 .sesion{
   font-size: 12px;
   margin-left: 210px;
+  text-decoration: none;
+  color: #000;
 }
 
 .envio{
@@ -412,6 +418,7 @@ section div a{
   width: 120px;
   height: 30px;
   border: none;
+  text-decoration: none;
 }
 
 .btn_2, .codigo{
@@ -420,6 +427,7 @@ section div a{
   text-align: center;
   padding: 5px 20px;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .section_parte1 input{
@@ -472,8 +480,31 @@ section div a{
   margin-left: 330px;
 }
 
-.circulo{
-  
+.circulos{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--botonesvolver);
+}
+
+.d_1{
+  position: absolute;
+  left: 260px;
+}
+
+.d_2{
+  position: absolute;
+  left: 610px;
+  background-color: var(--rosa);
+}
+
+.d_3{
+  position: absolute;
+  left: 1020px;
+}
+
+.section_parte2 .producto_carrito{
+  padding-bottom: 300px;
 }
 
   @media screen and (max-width: 999px) {
@@ -507,4 +538,69 @@ section div a{
     }
     
    
+}
+
+@media screen and (max-width:599px) {
+  .section .section_contenido{
+    width: 90%;
+    max-width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 10px 0px;
+  }
+  .sesion{
+    margin-left: 0px;
+  }
+  .section_parte1 h2{
+    border-bottom: 1px solid;
+  }
+  .seccion_1 a{
+    margin-left: 70px;
+  }
+  .d_1{
+    position: absolute;
+    left: 90px;
+  }
+  .d_2{
+    position: absolute;
+    left: 180px;
+  }
+  .d_3{
+    position: absolute;
+    left: 270px;
+  }
+  .controls{
+    width: 90%;
+   margin-right: 50px;
+    margin: 0.5rem 0;
+  }
+  .control{
+    width: 49%;
+    margin: 0.5rem 0;
+    padding: 5px 8px;
+  }
+}
+
+@media (min-width:600px) and (max-width:999px) {
+  .section .section_contenido{
+      width: 90%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+      padding: 35px 0px;
+  }
+  .seccion_1 a{
+    margin-left: 100px;
+  }
+  .d_1{
+    position: absolute;
+    left: 130px;
+  }
+  .d_2{
+    position: absolute;
+    left: 350px;
+  }
+  .d_3{
+    position: absolute;
+    left: 620px;
+  }
 }
