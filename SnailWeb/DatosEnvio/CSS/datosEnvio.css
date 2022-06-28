@@ -472,14 +472,6 @@ color: #fff;
   padding-top: 10px;
 }
 
-.parte2{
-  margin-left: 300px;
-}
-
-.parte_2{
-  margin-left: 330px;
-}
-
 .circulos{
   width: 25px;
   height: 25px;
@@ -505,6 +497,15 @@ color: #fff;
 
 .section_parte2 .producto_carrito{
   padding-bottom: 300px;
+}
+
+.btn_1:hover, .usar:hover{
+  color: white;
+  background-color: #000;
+}
+
+.btn_2:hover{
+  color: var(--rosa);
 }
 
   @media screen and (max-width: 999px) {
@@ -545,17 +546,36 @@ color: #fff;
     width: 90%;
     max-width: 90%;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
+    grid-gap: 0px;
     padding: 10px 0px;
   }
-  .sesion{
+  .btn_1{
+    margin: 20px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .codigo{
+    width: 65%;
+    margin: 20px;
     margin-left: 0px;
   }
-  .section_parte1 h2{
-    border-bottom: 1px solid;
+  .usar{
+    width: 25%;
+  }
+  .envio, .contacto, .subtotal, .total{
+    margin: auto;
+  }
+  .section_parte2 h2{
+    margin: auto;
   }
   .seccion_1 a{
-    margin-left: 70px;
+    margin-left: 40px;
+  }
+  .sesion{
+    margin-left: 140px;
+  }
+  .combox{
+    width: 48%;
   }
   .d_1{
     position: absolute;
@@ -570,12 +590,12 @@ color: #fff;
     left: 270px;
   }
   .controls{
-    width: 90%;
+    width: 98%;
    margin-right: 50px;
     margin: 0.5rem 0;
   }
   .control{
-    width: 49%;
+    width: 48%;
     margin: 0.5rem 0;
     padding: 5px 8px;
   }
