@@ -177,58 +177,74 @@
           </div>
         </nav>
         <hr>
-        <section class="section">
-          <div class="sector">
-            <div class="seccion_1">
-              <a>1. Carrito</a>
-              <a>2. Datos de envío</a>
-              <a>3. Opciones de pago</a>
-            </div>
-            <div class="figuras">
+        <section class="container-fluid section">
+          <div class="row sector text-center">
+            <div class="col-lg-4">
+              1. Carrito
               <div class="circulos d_1"></div>
+            </div>
+            <div class="col-lg-4">
+              2. Datos de envío
               <div class="circulos d_2"></div>
-              <div class="circulos d_3"></div>
+            </div>
+            <div class="col-lg-4">
+              3. Opciones de envío
+              <div class="circulos d_3"></div>            
             </div>
           </div>
           <hr>
-          <div class="section_contenido">
-            <div class="section_parte1">
-              <h2 class="contacto">Información de contacto <a href="#sesio-id" class="sesion">¿Ya tienes cuenta? Inicia sesión</a></h2>
-              <input class="controls" type="text" name="email" placeholder="micorreo@dominio.com">
-              <br>
-              <input class="check" type="checkbox" name="confirmacion" value="11">Enviarme novedades y orfertas a mi correo
-              <h2 class="envio">Datos de envío</h2>
-              <input class="control lineacion" type="text" name="nombre" placeholder="Nombre"> 
-              <input class="control" type="text" name="apellido" placeholder="Apellido">
-              <input class="controls" type="text" name="dni" placeholder="Dni/Pasaporte/Nro Documento">
-              <input class="controls" type="text" name="domicilio" placeholder="Domicilio">
-              <input class="controls" type="text" name="referencia" placeholder="Referencia (opcional)">
-              <form name="formulario1" action="#">
-                <select class="combox lineacion espace" name="departamento" id="departamento">
-                  <option value="departamento">Departamento</option>
-                </select>
-                <select class="combox lineacion espace" name="ciudad" id="ciudad">
-                  <option value="ciudad">Ciudad</option>
-                </select>
-                <select class="combox" name="distrito" id="distrito">
-                  <option value="distrito">Distrito</option>
-                </select>
-              </form>
-              <input class="control lineacion" type="text" name="telefono" placeholder="Teléfono">
-              <input class="control" type="text" name="codigo" placeholder="Cod. postal">
-              <br>
-              <input class="controles" type="checkbox" name="confirmacion" value="11">Enviarme novedades y orfertas a mi correo
-              <a href="../OpcionesPago/opcionesPago.html" class="botones btn_space btn_1">Continuar</a>
-              <a href="../Carrito/carritoWeb.html" class="botones btn_2">Volver al carrito</a>
-            </div>
-            <div class="section_parte2">
-              <h2 class="res_2">Resumen</h2>
-              <p class="producto_carrito"></p>
-              <input class="resumen codigo" type="text" name="descuento" placeholder="Código Descuento">
-              <a href="" class="resumen usar">Usar</a>
-              <h3 class="subtotal">Sub total: <span class="parte2 total_parte2">S/. </span></h3>
-              <h3>Envío: <span class="parte_2">S/. </span></h3>
-              <h3 class="total">Total: <span class="parte_2">S/. </span> </h3>
+          <div class="container">
+            <div class="row section_contenido">
+              <div class="col-lg-7 section_parte1">
+                <h2 class="contacto">Información de contacto <a href="#sesio-id" class="sesion">¿Ya tienes cuenta? Inicia sesión</a></h2>
+                <input class="controls" type="text" name="email" placeholder="micorreo@dominio.com">
+                <br>
+                <input class="check" type="checkbox" name="confirmacion" value="11">Enviarme novedades y orfertas a mi correo
+                <h2 class="envio">Datos de envío</h2>
+                <input class="control lineacion" type="text" name="nombre" placeholder="Nombre"> 
+                <input class="control" type="text" name="apellido" placeholder="Apellido">
+                <input class="controls" type="text" name="dni" placeholder="Dni/Pasaporte/Nro Documento">
+                <input class="controls" type="text" name="domicilio" placeholder="Domicilio">
+                <input class="controls" type="text" name="referencia" placeholder="Referencia (opcional)">
+                <form name="formulario1" action="#">
+                  <select class="combox lineacion espace" name="departamento" id="departamento">
+                    <option value="departamento">Departamento</option>
+                  </select>
+                  <select class="combox lineacion espace" name="ciudad" id="ciudad">
+                    <option value="ciudad">Ciudad</option>
+                  </select>
+                  <select class="combox" name="distrito" id="distrito">
+                    <option value="distrito">Distrito</option>
+                  </select>
+                </form>
+                <input class="control lineacion" type="text" name="telefono" placeholder="Teléfono">
+                <input class="control" type="text" name="codigo" placeholder="Cod. postal">
+                <br>
+                <input class="controles" type="checkbox" name="confirmacion" value="11">Enviarme novedades y orfertas a mi correo
+                <div class="row">
+                  <div class="col cont">
+                    <a href="../OpcionesPago/opcionesPago.html" class="botones btn_space btn_1">Continuar</a>
+                  </div>
+                  <div class="col text-end car">
+                    <a href="../Carrito/carritoWeb.html" class="botones btn_2">Volver al carrito</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5 section_parte2">
+                <h2 class="res_2">Resumen</h2>
+                <p class="producto_carrito"></p>
+                <div class="row text-center">
+                  <div class="col text-lg-start text-sm-center">
+                    <input class="resumen codigo" type="text" name="descuento" placeholder="Código Descuento">
+                  </div>
+                  <div class="col text-lg-end text-sm-center">
+                    <a href="" class="resumen usar">Usar</a>
+                  </div>
+                </div>
+                <h3 class="subtotal">Sub total: <span class="parte2 total_parte2">S/. </span></h3>
+                <h3>Envío: <span class="parte_2">S/. </span></h3>
+                <h3 class="total">Total: <span class="parte_2">S/. </span> </h3>
+              </div>
             </div>
           </div>
         </section>

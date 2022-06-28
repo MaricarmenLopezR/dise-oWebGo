@@ -323,31 +323,14 @@ color: #fff;
 }
   
 /*Section*/
-.seccion_1 a{
-  text-decoration: none;
-  font-size: 20px;
-  color: black;
-  margin-left: 230px;
-}
-
-.sector{
-  padding-bottom: 20px;
-}
-
-.section .section_contenido{
-  width: 100%;
-  max-width: 100%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-gap: 50px;
-  padding: 20px 0px;
-  padding-left: 80px;
-}
-
 .section_parte1 h2{
   border-bottom: 1px solid;
   font-size: 20px;
+}
+
+.section_contenido{
+  padding-top: 20px;
+  padding-bottom: 90px;
 }
 
 .controls{
@@ -357,13 +340,13 @@ color: #fff;
 }
 
 .control{
-  width: 49%;
+  width: 49.5%;
   margin: 0.5rem 0;
   padding: 5px 8px;
 }
 
 .lineacion{
-  margin-right: 8px;
+  margin-right: 2px;
 }
 
 .combox{
@@ -383,7 +366,7 @@ color: #fff;
 
 .sesion{
   font-size: 12px;
-  margin-left: 210px;
+  margin-left: 100px;
   text-decoration: none;
   color: #000;
 }
@@ -398,11 +381,6 @@ color: #fff;
 
 .botones{
   font-size: 18px;
-  margin-left: 0px;
-}
-
-.btn_space{
-  margin-right: 320px;
 }
 
 .controles{
@@ -441,25 +419,20 @@ color: #fff;
 .section_parte2 h2{
   font-size: 20px;
   border-bottom: 1px solid;
-  margin-right: 80px;
 }
 
 .resumen{
   font-size: 18px;
-  margin-left: 0px;
 }
 
 .codigo{
-  margin-right: 160px;
   background-color: var(--rosa);
   border: none;
 }
 
 .subtotal{
   border-top: 1px solid;
-  margin-right: 80px;
   margin-top: 15px;
-  padding-top: 10px;
 }
 
 .section_parte2 h3{
@@ -468,8 +441,6 @@ color: #fff;
 
 .total{
   border-top: 1px solid;
-  margin-right: 80px;
-  padding-top: 10px;
 }
 
 .circulos{
@@ -477,22 +448,11 @@ color: #fff;
   height: 25px;
   border-radius: 50%;
   background-color: var(--botonesvolver);
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.d_1{
-  position: absolute;
-  left: 260px;
-}
-
 .d_2{
-  position: absolute;
-  left: 610px;
   background-color: var(--rosa);
-}
-
-.d_3{
-  position: absolute;
-  left: 1020px;
 }
 
 .section_parte2 .producto_carrito{
@@ -506,6 +466,24 @@ color: #fff;
 
 .btn_2:hover{
   color: var(--rosa);
+}
+
+@media screen and (max-width:576px) {
+  .control{
+    width: 100%;
+  }
+  .combox{
+    width: 100%;
+  }
+  .codigo{
+    margin-bottom: 20px;
+  }
+  .cont, .car{
+    margin-bottom: 20px;
+  }
+  .sesion{
+    margin-left: 140px;
+  }
 }
 
   @media screen and (max-width: 999px) {
@@ -539,88 +517,4 @@ color: #fff;
     }
     
    
-}
-
-@media screen and (max-width:599px) {
-  .section .section_contenido{
-    width: 90%;
-    max-width: 90%;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 0px;
-    padding: 10px 0px;
-  }
-  .btn_1{
-    margin: 20px;
-    margin-left: 0px;
-    margin-top: 0px;
-  }
-  .codigo{
-    width: 65%;
-    margin: 20px;
-    margin-left: 0px;
-  }
-  .usar{
-    width: 25%;
-  }
-  .envio, .contacto, .subtotal, .total{
-    margin: auto;
-  }
-  .section_parte2 h2{
-    margin: auto;
-  }
-  .seccion_1 a{
-    margin-left: 40px;
-  }
-  .sesion{
-    margin-left: 140px;
-  }
-  .combox{
-    width: 48%;
-  }
-  .d_1{
-    position: absolute;
-    left: 90px;
-  }
-  .d_2{
-    position: absolute;
-    left: 180px;
-  }
-  .d_3{
-    position: absolute;
-    left: 270px;
-  }
-  .controls{
-    width: 98%;
-   margin-right: 50px;
-    margin: 0.5rem 0;
-  }
-  .control{
-    width: 48%;
-    margin: 0.5rem 0;
-    padding: 5px 8px;
-  }
-}
-
-@media (min-width:600px) and (max-width:999px) {
-  .section .section_contenido{
-      width: 90%;
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 30px;
-      padding: 35px 0px;
-  }
-  .seccion_1 a{
-    margin-left: 100px;
-  }
-  .d_1{
-    position: absolute;
-    left: 130px;
-  }
-  .d_2{
-    position: absolute;
-    left: 350px;
-  }
-  .d_3{
-    position: absolute;
-    left: 620px;
-  }
 }
