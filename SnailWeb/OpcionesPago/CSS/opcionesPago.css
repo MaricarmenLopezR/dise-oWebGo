@@ -321,7 +321,138 @@ color: #fff;
   color: #fff;
   font-size: 15px;
 }
+.circulos{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--botonesvolver);
+  margin-left: auto;
+  margin-right: auto;
+  }
+  .d_3{
+  background-color: var(--rosa);
+  }
   
+  fieldset img{
+    height: 100px;
+    padding-left:20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  #medioPago legend{
+    background-color: #EB4A5F;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  fieldset{
+    margin-bottom: 20px;
+    margin-left: 30px;
+  }
+  
+  fieldset div{
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  #medioPago{
+    border-radius: 20px;
+    border: #000 2px solid;
+  }  
+  
+  .row{
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 80px;
+  }
+  
+  .row aside div{
+    background-color: #dcdcdc;
+  }
+  
+  section fieldset input{
+    padding-right: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  
+  
+  section fieldset label{
+    padding-right: 5px;
+  }
+  
+  section fieldset select{
+    padding-top: 4px;
+    background-color: #c8c8c8;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+  }
+  
+  section fieldset i{
+    margin-left: 10px ;
+    padding-right: 5px;
+  }
+  
+  #div fieldset{
+    border: #000 2px solid;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  
+  
+  #div legend{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #a1a1a1;
+  }
+  
+  .row aside div{
+    margin-bottom: 20px;
+    margin-left: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+  
+    border: #000 1px solid;
+  }
+  
+  .row aside div h5{
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .row aside #regresarCarrito{
+    background-color: #2A363B;
+    color: #fff;
+  }
+  
+  .row aside #Borrar{
+    background-color: #ff3936;
+    color: #fff;
+  }
+  
+  .row aside #Continuar{
+    background-color: #4A6AEB;
+    color: #fff;
+  }
+  
+  .row aside a {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+  }
   @media screen and (max-width: 999px) {
     
 

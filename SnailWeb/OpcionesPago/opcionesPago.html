@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/iconoWEB.png">   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/opcionesPago.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,7 +85,7 @@
                 </div>
             </div>
         </header>
-        <hr>
+        <hr style="margin: 0;">
         <nav class="container navbar navbar-expand-lg">
           <div class="container-fluid">
             
@@ -177,7 +178,123 @@
             </div>
           </div>
         </nav>
-        <hr>
+        <hr style="margin: 0;">
+        <div class="container">
+          <div class="row d-flex sector m-2">
+            <div class="col-lg-4 text-center">
+              1. Carrito
+              <div class="circulos d_1"></div>
+            </div>
+            <div class="col-lg-4 text-center">
+              2. Datos de envío
+              <div class="circulos d_2"></div>
+            </div>
+            <div class="col-lg-4 text-center">
+              3. Opciones de envío
+              <div class="circulos d_3"></div>            
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="row text-center">
+              <h1><span>Opciones de Pago</span></h1>
+            </div>
+            <section class="col-md-6 col-sm-8">
+             
+              <fieldset id="medioPago">
+                <legend>Medio de pago</legend>
+                <div style="border: black 2px solid;">
+                  <input type="radio" name="medioPag" value="tarjeta" onclick="toggle(this)">
+                  <img src="../OfertaDia/img/visa.png" alt="visa">
+                  <img src="../OfertaDia/img/masterCard.png" alt="masterCard">
+                  <img src="../OfertaDia/img/americanExpress.jpg" alt="americanExpress">
+                  <img src="../OfertaDia/img/dinersClub.png" alt="dinersClub">
+                </div>
+                <br>
+        
+                <div style="border: black 2px solid;">
+                  <input type="radio" name="medioPag" value="Paypal" onclick="toggle(this)">
+                  <img src="../OfertaDia/img/payPal.png" alt="payPal">
+                </div>
+                <br>
+        
+                <div style="border: black 2px solid;">
+                  <input type="radio" name="medioPag" value="pagEfectivo" onclick="toggle(this)">
+                  <img src="../OfertaDia/img/pagoEfectivo.png" alt="pagoEfectivo">
+                </div>
+        
+                <br>
+              </fieldset>
+              <div id="div" style="display: none;">
+                <fieldset>
+                  <legend>Datos de la tarjeta</legend>
+                  <input type="text" name="numeroTarjeta" id="numTarjeta" placeholder="Número de la tarjeta" maxlength="20">
+                  <br>
+                  <input type="text" name="nombreTitular" id="nomTitular" placeholder="Nombre del Titular">
+                  <input type="text" name="apellidoTitular" id="apeTitular" placeholder="Apellido del Titular">
+                  <br>
+                  <input type="text" name="codigoSeguridad" id="codSeguridad" placeholder="Código de Seguridad" maxlength="3">
+                  <label for="">Fecha de caducidad:</label>
+                  <select name="fechaMes" id="mes">
+                    <option selected="selected">MM</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                  </select>
+                  <select name="fechaMes" id="mes">
+                    <option selected="selected">YY</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                  </select>
+                  <hr>
+                  <input type="checkbox">Guardar esta tarjeta.
+                  <br>
+                  <i class="fa-solid fa-user-shield"></i>Tu Información esta segura con nosotros.
+                </fieldset>
+              </div>
+        
+        
+            </section>
+            <aside class="col-md-6 col-sm-8">
+              <div>
+                <h5>Datos de la entrega</h5>
+                <hr>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia saepe, reprehenderit nemo, minus vero
+                  aliquam necessitatibus distinctio sit voluptatum dolore earum repellat tempore nisi corrupti iusto quo
+                  praesentium cumque repudiandae!</p>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia saepe, reprehenderit nemo, minus vero
+                    aliquam necessitatibus distinctio sit voluptatum dolore earum repellat tempore nisi corrupti iusto quo
+                    praesentium cumque repudiandae!</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia saepe, reprehenderit nemo, minus vero
+                      aliquam necessitatibus distinctio sit voluptatum dolore earum repellat tempore nisi corrupti iusto quo
+                      praesentium cumque repudiandae!</p>
+              </div>
+              <a href="../Carrito/carritoWeb.html" class="btn" id="regresarCarrito">Regresar al Datos</a>
+              <a href="#" class="btn" id="Borrar">Borrar</a>
+              <a href="#" class="btn" id="Continuar">Continuar</a>
+            </aside>
+        
+        
+          </div>
+        </div>
+      
+      
+      
+      
         <footer class="text-white text-center text-lg-start bg-dark">
           <!-- Grid container -->
           <div class="container p-4">

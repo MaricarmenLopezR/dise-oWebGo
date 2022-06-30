@@ -1,0 +1,27 @@
+
+body{
+    background: #EB4A5F;
+    background: linear-gradient(to right,#ffa751,#EB4A5F);
+}
+.bg{
+    background-image: url(https://www.egames.news/__export/1643390219261/sites/debate/img/2022/01/28/qux_es_un_gamer_y_en_qux_se_diferencia_de_un_aficionado_a_los_videojuegos.jpg_1902800913.jpg);
+    background-position: center;
+}
+
+.d-grid a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'roboto';
+    border-radius: 10px;
+    background-color: #2A363B;
+    color: #fff;
+    text-align: center;
+    height: 30px;
+    font-size: 20px;
+}
+
+.d-grid a:hover{
+    
+    background-color: #4A6AEB;
+    
+}
