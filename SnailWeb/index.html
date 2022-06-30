@@ -328,7 +328,7 @@
                   <span class="s-precio">s/<span class="precio">162.54</span></span>
                 </div>
               </div>
-              <button class="btn-add-cart" onclick="purchaseClicked()" data-id="1" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+              <button class="btn-add-cart" data-id="1" data-bs-toggle="modal" data-bs-target="#exampleModal2"
               >Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
 
             </div>
@@ -347,7 +347,8 @@
                   <span class="s-precio">s/<span class="precio">162.54</span></span>
                 </div>
               </div>
-              <button class="btn-add-cart" data-id="2">Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
+              <button class="btn-add-cart" data-id="2" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+              >Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
 
             </div>
             <div class="producto">
@@ -506,15 +507,15 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Producto agregado correctamente</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Tu producto se agregó al carrito</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <p id="dato"></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Aceptar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
+            <a class="btn btn-primary" href="./Carrito/carritoWeb.html" role="button">Ir al carrito</a>
           </div>
         </div>
       </div>

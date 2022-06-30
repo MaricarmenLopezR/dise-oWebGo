@@ -78,6 +78,7 @@ function readTheContent(product){
     
     loadHtml();
     console.log(infoProduct);
+    
 }
 
 function loadHtml(){
@@ -112,20 +113,16 @@ function loadHtml(){
        localStorage.setItem(id,JSON.stringify(datos));
        priceTotal.innerHTML = totalCard;
        amountProduct.innerHTML = countProduct;
+
+       document.getElementById('dato').innerHTML = `
+       <img src="${image}">
+       <h5 >${title}</h5>
+       <h4 class="cart-price">Precio:${price}</h4>    
+       `;
     });
    
 }
 
-function purchaseClicked() {
-    
-    document.getElementById('dato').innerHTML = `
-    <img src="${image}">
-    <h5 >${title}</h5>
-   `;
-    while (cartItems.hasChildNodes()) {
-        cartItems.removeChild(cartItems.firstChild)
-    }
-}
 
 function clearHtml(){
     containerBuyCart.innerHTML='';
