@@ -317,7 +317,35 @@ background: #572364;
 color: #fff;
 }
 
-  
+/*SECTION*/
+
+.mision{
+  width: 350px;  
+}
+
+.mision{
+  float: right;
+  padding-left: 20px;
+}
+
+.vision{
+  float: left;
+  width: 400px;
+  padding-right: 20px;
+}
+
+.mision_style, .vision_style{
+  padding-bottom: 150px;
+}
+
+.mision_style{
+  padding-top: 20px;
+}
+
+.tittle{
+  color: #EB4A5F;
+}
+ 
   @media screen and (max-width: 999px) {
     
 
