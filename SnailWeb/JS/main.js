@@ -1,3 +1,4 @@
+
 /* carrito */
 let allcontainerCart = document.querySelector('.carousel-products');
 let buythings = [];
@@ -42,6 +43,11 @@ function deleteProduct(e){
         })
         
         buythings = buythings.filter(product => product.id !== deleteId);
+      
+          
+        localStorage.removeItem(deleteId);
+           
+      
     }
     loadHtml();
 }
@@ -78,7 +84,6 @@ function readTheContent(product){
     
     loadHtml();
     console.log(infoProduct);
-    
 }
 
 function loadHtml(){
@@ -107,7 +112,7 @@ function loadHtml(){
         'precio': price,
         'codigo': code,
         'cantidad':amount,
-        'total':totalCard
+        
         };
 
        localStorage.setItem(id,JSON.stringify(datos));
@@ -115,15 +120,14 @@ function loadHtml(){
        amountProduct.innerHTML = countProduct;
 
        document.getElementById('dato').innerHTML = `
-       <img src="${image}">
-       <h5 >${title}</h5>
-       <h4 class="cart-price">Precio:${price}</h4>    
+       <img class="modal-imagen" src="${image}">
+       <h5 class="modal-carrito" >${title}</h5>
+       <h4 class="">Precio:${price}</h4>    
        `;
+
     });
    
 }
-
-
 function clearHtml(){
     containerBuyCart.innerHTML='';
     amountProduct.innerHTML="0";
@@ -197,4 +201,6 @@ productos.forEach((producto) =>{
 
 fila.addEventListener('mouseleave',()=>{
     productos.forEach(producto => producto.classList.remove('hover'));
-})
+});
+
+

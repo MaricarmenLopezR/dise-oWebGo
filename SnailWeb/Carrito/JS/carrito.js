@@ -1,19 +1,24 @@
 /*Carrito*/
  
 recuperarDatos();
-total();
-const borrar = document.getElementById('borrar');
+
+let sub_total=document.getElementById('sub_total');
+let pagoTotal=document.getElementById('totalPag');
 
 
 function recuperarDatos(){
     var registro ="";
+    var subtotal=0;
+    var total=0;
+    var envio =25.00;
     if (localStorage.length == 0) {
         registro+= '<li>Vacío</li>';
+        document.getElementById('carrito-contenido').innerHTML = registro;
+        borrar();
         
     } else {
         for(var i = 0; i<=localStorage.length - 1; i++){
             var key = localStorage.key(i);
-            var subtotal;
             var datosJson = JSON.parse(localStorage.getItem(key));
             
             registro += '<div class="producto-carrito" >'+
@@ -23,32 +28,37 @@ function recuperarDatos(){
             '<div class="codigo-pro stilo d-flex">'+'<h1  class="stilo2"> Codigo: </h1>'+datosJson.codigo+'</div>'+'<hr style="margin: 0;">'+
             '<div class="cantidad-pro stilo  d-flex">'+'<h1 class="stilo2"> Cantidad: </h1>'+datosJson.cantidad+'</div>'+ '<hr style="margin: 0;">'+
             '<div class="precio-pro stilo  d-flex">'+'<h1  class="stilo2"> Precio: </h1>'+ datosJson.precio+'</div>'+'</div>'+'<div class="boton-borrar">'+
-            `<a  id="borrar" data-id="${key}">X</a>`  +'</div>'+
+            `<a  id="borrar" onclick="eliminar()" data-id="${key}">X</a>`  +'</div>'+
              '</div> <br> <hr>'
-            subtotal = datosJson.total;
+            subtotal = parseFloat(datosJson.cantidad) * parseFloat(datosJson.precio);
+            total = total + subtotal;
+           
            
         }
-        
+       
     }
-  
+    total = total.toFixed(2);
+    envio = envio + parseFloat(total) ;
+    envio = envio.toFixed(2);
     document.getElementById('carrito-contenido').innerHTML = registro;
-    document.getElementById('sub_total').innerHTML=subtotal;
+    document.getElementById('sub_total').innerHTML = total;
+    document.getElementById('totalPag').innerHTML = envio ;
 
 }
 
-function total(){
-    var sub_total = document.getElementBy('sub_total');
+
+function borrar(){
+    sub_total.innerHTML = "0";
+    pagoTotal.innerHTML = "0"; 
+}
+function eliminarTodo(){
+    localStorage.clear();
+    actualizarDatos();
+}
+
+function eliminar(){
+    var id = document.getElementById('borrar').getAttribute('data-id');
    
-    var pagototal;
-    pagototal= sub_total + 25;
-    console.log(sub_total);
-    document.getElementById('totalPag').innerHTML = pagototal;
-}
-
-borrar.addEventListener('click', () => {
-    var id = borrar.getAttribute('data-id');
-    console.log(id);
     localStorage.removeItem(id);
     recuperarDatos();
-});
-
+}

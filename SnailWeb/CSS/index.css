@@ -594,6 +594,18 @@ body{
   color: #fff;
 }
 
+.modal-carrito{
+  font-size: 15px;
+}
+.modal-imagen{
+  height: 219px;
+  width: 340px;
+  padding-left: 80px;
+}
+
+
+
+
 
   @media screen and (max-width: 999px) {
     

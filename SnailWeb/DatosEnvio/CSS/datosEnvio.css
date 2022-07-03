@@ -477,6 +477,20 @@ background-color: #000;
 .btn_2:hover{
 color: var(--rosa);
 }
+.producto-carrito{
+  display: flex;
+}
+
+.stilo{
+ font-size: 15px; 
+}
+.stilo2{
+  font-size: 15px; 
+  padding-right: 5px;
+}
+.producto-carrito img{
+  height: 100px;
+}
 
 @media screen and (max-width:576px) {
 .control{
