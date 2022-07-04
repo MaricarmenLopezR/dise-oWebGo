@@ -11,6 +11,9 @@ let countProduct=0;
 let allcontainerCart2 = document.querySelector('.carousel-products2');
 let allcontainerCart3 = document.querySelector('.carousel-products3');
 
+function pPagina(){
+   location.href="Producto/producto.html";
+}
 loadEventListenrs();
 function loadEventListenrs(){
     allcontainerCart.addEventListener('click',addProduct);
@@ -202,5 +205,3 @@ productos.forEach((producto) =>{
 fila.addEventListener('mouseleave',()=>{
     productos.forEach(producto => producto.classList.remove('hover'));
 });
-
-

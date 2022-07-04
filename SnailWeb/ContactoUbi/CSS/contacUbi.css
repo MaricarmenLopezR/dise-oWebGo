@@ -295,27 +295,7 @@ nav ul li{
   padding-left: 65px;
 }
 
-.btn-floating1:hover{
-background: #4A6AEB;
-color: #fff;
-}
-.btn-floating2:hover{
-background:  #dd2a7b;
-color: #fff;
-}
-.btn-floating3:hover{
-background: #00acee;
-color: #fff;
-}
-.btn-floating4:hover{
-background: #00bb2d;
-color: #fff;
-}
 
-.btn-floating:hover{
-background: #572364;
-color: #fff;
-}
 .numero2{
   text-decoration: none;
   font-size: 25px;
@@ -344,7 +324,11 @@ color: #fff;
   border-radius: 10px;
   border: none;
   height: 40px;
-  
+  }
+  .control:hover{
+    background-color: var(--botonesvolver);
+    color: #fff;
+    
   }
   .form-control{
     width: 80%;

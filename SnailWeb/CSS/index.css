@@ -564,33 +564,27 @@ body{
   font-family: 'Roboto';
   padding-left: 290px;
 }
-.aside button{
+.button1{
   background: var(--botones);
-  font-size: 20px;
+  
   font-family: 'Roboto';
-  width: 110px;
+  width: 120px;
   height: 40px;
   border-radius: 15px;
   border: 0;
   outline: none;
   cursor: pointer;
-  color: #fff;
-  margin-right: 280px;
+ 
+
   
 }
-.aside button:hover{
+
+.button1:hover{
   background: var(--botonesvolver);
 }
-.aside .input-group{
-  width: 790px;
-  height: 10px;
-}
-.aside .input-group input{
- background: var(--rosa);
- 
-}
 
-.aside .input-group input::placeholder{
+
+.form-controt::placeholder{
   color: #fff;
 }
 
@@ -603,8 +597,25 @@ body{
   padding-left: 80px;
 }
 
-
-
+.for .form-control{
+  width: 70%;
+}
+.dropdown-menu li {
+  position: relative;
+  }
+  .dropdown-menu .dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+  }
+  .dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+  }
+  .dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
+  }
 
 
   @media screen and (max-width: 999px) {

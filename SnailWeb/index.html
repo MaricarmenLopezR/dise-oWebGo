@@ -67,7 +67,7 @@
                         ¿Olvidaste tu contraseña?
                     </a>
                     <div class="boton">
-                        <button type="button" class="btn btn-outline-dark">Iniciar Sesión</button>
+                        <button type="button" onclick="modal_01()" class="btn btn-outline-dark">Iniciar Sesión</button>
                     </div>
                     <h2>O conectate a travez de:</h2>
                     <div class="card-icons">
@@ -121,26 +121,122 @@
                       Todos las Categorias
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#"><img src="img/procesador.png" alt=""> PROCESADOR <i class="fas fa-caret-right"></i></a></li>
+                        <li><a class="dropdown-item" href="#"><img src="img/procesador.png" alt=""> PROCESADOR <i class="fas fa-caret-right"></i></a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">AMD</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">INTEL</a>
+                            </li>
+                        </ul></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"><img src="img/tarjeta-madre.png" alt=""> PLACA MADRE <i class="fas fa-caret-right"></i></a></i></li>
+                        <li><a class="dropdown-item" href="#"><img src="img/tarjeta-madre.png" alt=""> PLACA MADRE <i class="fas fa-caret-right"></i></a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">MSI</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">GIGABYTE</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">RTX</a>
+                            </li>
+                        </ul></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"><img src="img/disco-duro-externo.png" alt=""> MEMORIA Y ALMACENAMIENTO <i class="fas fa-caret-right"></i></a></li>
+                        <li><a class="dropdown-item" href="#"><img src="img/disco-duro-externo.png" alt=""> MEMORIA Y ALMACENAMIENTO <i class="fas fa-caret-right"></i></a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">SSD</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">HDD</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">MEMORIA RAM GRAFICA</a>
+                            </li>
+                        </ul></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"><img src="img/carta-grafica.png" alt=""> TARJETA DE VIDEO<i class="fas fa-caret-right"></i></a></li>
+                        <li><a class="dropdown-item" href="#"><img src="img/carta-grafica.png" alt=""> TARJETA DE VIDEO<i class="fas fa-caret-right"></i></a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">RADEON TARJETA GRAFICA</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">NVIDIA GEFORCE GTX TARJETA GRAFICA</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">NVIDIA GEFORCE RTX TARJETA GRAFICA</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">NVIDIA QUADRO TARJETA GRAFICA</a>
+                            </li>
+                        </ul></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"><img src="img/tarjeta-de-sonido.png" alt=""> TARJETA DE SONIDO <i class="fas fa-caret-right"></i></a></li>
+                        <li><a class="dropdown-item" href="#"><img src="img/tarjeta-de-sonido.png" alt=""> TARJETA DE SONIDO <i class="fas fa-caret-right"></i></a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">ASUS </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">GAMBYTE</a>
+                            </li>            
+                        </ul></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"><img src="img/tarjeta-de-interfaz-de-red.png" alt=""> TARJETA DE RED <i class="fas fa-caret-right"></i></a></li>
+                        <li><a class="dropdown-item" href="#"><img src="img/tarjeta-de-interfaz-de-red.png" alt=""> TARJETA DE RED <i class="fas fa-caret-right"></i></a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">ASUS </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">TP-LINK</a>
+                            </li>            
+                        </ul></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"><img src="img/ordenador-portatil.png" alt=""> LAPTOP <i class="fas fa-caret-right"></i></a></li>
+                        <li><a class="dropdown-item" href="#"><img src="img/ordenador-portatil.png" alt=""> LAPTOP <i class="fas fa-caret-right"></i></a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">HP</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">ASUS</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">LENOVO</a>
+                            </li>             
+                        </ul></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"><img src="img/water-cooler.png" alt=""> COOLER <i class="fas fa-caret-right"></i></a></li>
+                        <li><a class="dropdown-item " href="#"><img src="img/water-cooler.png" alt=""> COOLER <i class="fas fa-caret-right"></i></a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">NZXT KRAKEN</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">BEQUIET</a>
+                            </li>            
+                        </ul></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"><img src="img/fuente-de-alimentacion.png" alt=""> FUENTE DE PODER <i class="fas fa-caret-right"></i></a></li>
+                        <li><a class="dropdown-item " href="#"><img src="img/fuente-de-alimentacion.png" alt=""> FUENTE DE PODER <i class="fas fa-caret-right"></i></a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">EVGA</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">MSI</a>
+                            </li>            
+                        </ul></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"><img src="img/torre-de-la-cpu.png" alt=""> CASE <i class="fas fa-caret-right"></i></a></li>
-          
+                        <li><a class="dropdown-item" href="#"><img src="img/torre-de-la-cpu.png" alt=""> CASE <i class="fas fa-caret-right"></i></a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">ANTRYX </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Catalogo/catalogoWeb.html">GAMBYTE</a>
+                            </li>            
+                        </ul></li>
+                       
+                          
                       </ul>
                   </div>
                    
@@ -199,6 +295,7 @@
 
         
         <hr style="margin-top: 0;">
+       
         <section class="container">
             <div class="row imgP mb-4">
               <div class="col-lg-8 col-md-12">
@@ -251,7 +348,7 @@
                 <div class="contenedor-carousel">
                  <div class="carousel-products">
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=17lMqCgxf_U6lnZQVV9NXDtKgLWvYQr1h" alt="">
                     </div>
@@ -268,7 +365,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1fkBUN5gNQRFhs2FN5pj40z0Ur8TNsXzP" alt="">
                     </div>
@@ -285,7 +382,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1BTmYUuDNZZfHoENVOMAxIR1XGbZf4T1k" alt="">
                     </div>
@@ -302,7 +399,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1THN5MpPPvoNYOW4jiChAgoedNGsQTC2s" alt="">
                     </div>
@@ -319,7 +416,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1cPQnOawtYJdrhNmKuuLQTCJzADp-dtT_" alt="">
                     </div>
@@ -336,7 +433,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1sBBq3dJNm25iULF1ugPFp1UgVqAJFniS" alt="">
                     </div>
@@ -353,7 +450,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1WIkvkY6xwo0SNK0_RxDMcMfQhELrZp4k" alt="">
                     </div>
@@ -370,7 +467,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1HErHPqvS_khluStwmOH6a_q9YSszGSl-" alt="">
                     </div>
@@ -387,7 +484,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1jK3LdqotJaF2acmjNxZIuR0lDn7O8aek" alt="">
                     </div>
@@ -404,7 +501,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1iyhon-JSd5l0D3IIIJZwibpnBWcGtKVa" alt="">
                     </div>
@@ -451,7 +548,7 @@
                 <div class="contenedor-carousel contenedor-carousel2">
                  <div class="carousel-products carousel-products2">
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1QFOsFmRjjhPvF-BA5R1fPO1ktW9Wmmt1" alt="">
                     </div>
@@ -467,7 +564,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1qhriuY7ZgljxrgPp-RbSd-BvTk9v7a1y" alt="">
                     </div>
@@ -484,7 +581,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1zwfLgqEFJgMVCDZ39_XhxT0EiN_9XuEo" alt="">
                     </div>
@@ -501,7 +598,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1d_roHB2X6or4kX1MOkiXpb4Y6UkLhMI3" alt="">
                     </div>
@@ -518,7 +615,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1hFzCH-Xre2IYHQi28UsSSbTGH3AhegPq" alt="">
                     </div>
@@ -535,7 +632,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=19HYVOInmqa-GVkBV-h7comuF39NizUTe" alt="">
                     </div>
@@ -552,7 +649,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1JvOUM7iUDvtmY_dFX3M-Ka5YdPklaJxO" alt="">
                     </div>
@@ -569,7 +666,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1YlC04Y651HGYMiMa-JpE5OyRBNS2uqOI" alt="">
                     </div>
@@ -586,7 +683,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1D6gKAFDxZokH8N_fWa5kijDjEyg26qSO" alt="">
                     </div>
@@ -603,7 +700,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1P7iPWMym9xjplMy8R8CCbAQHZS5ot9rS" alt="">
                     </div>
@@ -636,7 +733,7 @@
                 <div class="contenedor-carousel contenedor-carousel3">
                  <div class="carousel-products carousel-products3">
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1SbrlCvoQfNGeEFVXmnaIHNgjO4wOX6l1" alt="">
                     </div>
@@ -653,7 +750,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1wXX24ylxM2XUnMoSI20pAytSzHQxTmja" alt="">
                     </div>
@@ -670,7 +767,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=19dGT1QSifqJleveUmjCoEZAuVOaxElUx" alt="">
                     </div>
@@ -687,7 +784,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1QTAo37hVclwFUbCpEuyLxBZah8987USk" alt="">
                     </div>
@@ -704,7 +801,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1Og006C-GNn2_6XiCEeK11GtsGMZh7g1_" alt="">
                     </div>
@@ -721,7 +818,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=13Tl-hzQt3_px8t8Y9AOREu9hR0G6quws" alt="">
                     </div>
@@ -738,7 +835,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1Mpy6JB5SQ2V4FU_K5ic1aPHJsr70jvqs" alt="">
                     </div>
@@ -755,7 +852,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=121gEZLM5WvcOl1CCCP3kTTZG4X0f8IeI" alt="">
                     </div>
@@ -772,7 +869,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=19bbtWKiATL5g-ky-K36NwdGiIJeTQN-U" alt="">
                     </div>
@@ -789,7 +886,7 @@
                     
                   </div>
                   <div class="producto"> 
-                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
                     <div class="cont-img">
                       <img class="item-image" src="https://drive.google.com/uc?export=download&id=1OGj23-VO8Cv7CyFfWMUHwdrscIvP0nYU" alt="">
                     </div>
@@ -833,18 +930,17 @@
 
     
 
-        <aside>
-          <div class="row aside ">
-           <div class="d-flex justify-content-between">
-            <h2>Suscribete para recibir ofertas:</h2>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">@</span>
-              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
-            <button>Suscribirse</button>
-           </div>
+        <aside class="container">
+          
+           <div class="row d-flex pb-3" style="align-items: center ;">
+           <div class="col col-lg-4 col-sm-12 col-xs-12"> <h2 style="font-size: 20px ; padding: 0;">Suscribete para recibir ofertas:</h2>
             
           </div>
+          <div class="col col-lg-6 col-sm-12 col-xs-12 for"><input class="form-control form-control2 me-2" type="email" placeholder="Micorreo@correo.com" aria-label="Search"></div>
+          <div class="button1 text-center col col-lg-2 col-sm-12 col-xs-12"><a href="#" onclick="modal_02()" style="color: #fff; text-decoration: none; font-size: 20px;">Suscribirse</a></div>
+           </div>
+            
+         
         </aside>
 
     <footer class="text-white text-center text-lg-start bg-dark">
@@ -857,7 +953,8 @@
               <h5 class="text-uppercase mb-4">ACERCA DE NOSOTROS</h5>
     
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolores veritatis, doloremque nobis hic quaerat ullam nisi quam exercitationem voluptatum ab culpa aspernatur ratione tempore rerum perspiciatis dolorem ex alias.
+                Snail es una empresa que se dedica a la venta online de una 
+                amplia gama de productos de calidad de electrónica en Lambayeque - Chiclayo. 
               </p>
     
               
@@ -917,6 +1014,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="JS/main.js"></script>
     <script src="https://kit.fontawesome.com/0ea696cd02.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JS/sweetAlert.js"></script>
     
 </body>
 </html>
