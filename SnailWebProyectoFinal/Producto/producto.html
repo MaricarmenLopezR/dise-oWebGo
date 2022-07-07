@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/iconoWEB.png">     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/producto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Snail Store</title>
+</head>
+<body>
+    
+  <header class="container d-flex align-items-center">
+    <div class="logo">
+        <a href="../index.html"><img src="../img/LogoF.png" alt=""></a>
+    </div>
+    <div class="buscador">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+    </div>
+    <div class="iniciarSesion">
+        <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+        <div class="sesion" id="sesio-id" >
+            <p class="close-btn" onclick="closeBtn()" >X</p>
+            
+            <div class="email">
+                <form class="container-fluid">
+                    <div class="input-group">
+                      <span class="input-group-text" id="basic-addon1">@</span>
+                      <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                  </form>
+            </div>
+            
+            <div class="contrasena">
+                <form class="container-fluid">
+                    <div class="input-group">
+                      <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
+                      <input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </form>
+            </div>
+            
+            <a data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modalFormResetPassword" class="btn btn-link pr-0 float-right">
+                ¿Olvidaste tu contraseña?
+            </a>
+            <div class="boton">
+                <button type="button" onclick="modal_01()" class="btn btn-outline-dark">Iniciar Sesión</button>
+            </div>
+            <h2>O conectate a traves de:</h2>
+            <div class="card-icons">
+              <div class="iconsF">
+               <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+              </div>
+              <div class="iconsG">
+               <a href="#"> <i class="fa-brands fa-google"></i></a>
+              </div>
+            </div>
+            <a href="../Register/registrar.html" class="register">
+                ¿Eres Nuevo? , Registrate Aqui!
+            </a>
+            
+        </div>
+    </div>
+    <div class="submenu" id="submenu">
+        <a  href="../Carrito/carritoWeb.html" id="butt"><i class="fa-solid fa-cart-shopping"></i></a>
+        <p class="count-product">0</p>
+        <div class="cart-products" id="products-id" >
+            <p class="close-btn" onclick="closeBtn()" >X</p>
+            <h3>Mi carrito</h3>
+            <div class="card-items">
+              <div class="item">
+              </div>
+            </div>
+            <h2>Total: S/ <strong class="price-total">0</strong></h2>
+           <div class="botoncarrito">
+            <a href="../carrito/carritoWeb.html">Ver Carrito</a>
+           </div>
+        </div>
+    </div>
+    
+</header>
+<hr style="margin: 0;">
+
+<nav class="container navbar navbar-expand-lg  bg-white">
+  <div class="container-fluid">
+    
+    <a class="navbar-brand" href="#">Menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item dropdown">
+          <div class="caja">
+            <a class="nav-link dropdown-toggle tg" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-bars"></i>
+              Todos las Categorías
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"><img src="../img/procesador.png" alt=""> PROCESADOR <i class="fas fa-caret-right"></i></a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">AMD</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">INTEL</a>
+                    </li>
+                </ul></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><img src="../img/tarjeta-madre.png" alt=""> PLACA MADRE <i class="fas fa-caret-right"></i></a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">MSI</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">GIGABYTE</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">RTX</a>
+                    </li>
+                </ul></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><img src="../img/disco-duro-externo.png" alt=""> MEMORIA Y ALMACENAMIENTO <i class="fas fa-caret-right"></i></a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">SSD</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">HDD</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">MEMORIA RAM GRAFICA</a>
+                    </li>
+                </ul></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><img src="../img/carta-grafica.png" alt=""> TARJETA DE VIDEO<i class="fas fa-caret-right"></i></a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">RADEON TARJETA GRAFICA</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">NVIDIA GEFORCE GTX TARJETA GRAFICA</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">NVIDIA GEFORCE RTX TARJETA GRAFICA</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">NVIDIA QUADRO TARJETA GRAFICA</a>
+                    </li>
+                </ul></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><img src="../img/tarjeta-de-sonido.png" alt=""> TARJETA DE SONIDO <i class="fas fa-caret-right"></i></a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">ASUS </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">GAMBYTE</a>
+                    </li>            
+                </ul></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><img src="../img/tarjeta-de-interfaz-de-red.png" alt=""> TARJETA DE RED <i class="fas fa-caret-right"></i></a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">ASUS </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">TP-LINK</a>
+                    </li>            
+                </ul></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><img src="../img/ordenador-portatil.png" alt=""> LAPTOP <i class="fas fa-caret-right"></i></a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">HP</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">ASUS</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">LENOVO</a>
+                    </li>             
+                </ul></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item " href="#"><img src="../img/water-cooler.png" alt=""> COOLER <i class="fas fa-caret-right"></i></a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">NZXT KRAKEN</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">BEQUIET</a>
+                    </li>            
+                </ul></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item " href="#"><img src="../img/fuente-de-alimentacion.png" alt=""> FUENTE DE PODER <i class="fas fa-caret-right"></i></a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">EVGA</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">MSI</a>
+                    </li>            
+                </ul></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><img src="../img/torre-de-la-cpu.png" alt=""> CASE <i class="fas fa-caret-right"></i></a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">ANTRYX </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Catalogo/catalogoWeb.html">GAMBYTE</a>
+                    </li>            
+                </ul></li>
+               
+                  
+              </ul>
+          </div>
+           
+        </li>
+        <li class="nav-item1">
+          <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item2">
+          <a class="nav-link" href="../Catalogo/catalogoWeb.html">Catálogo</a>
+        </li>
+        <li class="nav-item3">
+          <a class="nav-link" href="../OfertaDia/ofertaDia.html">Ofertas del Día</a>
+        </li>
+        <li class="nav-item4 dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Marcas
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="../Catalogo/catalogoWeb.html">MSI</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../Catalogo/catalogoWeb.html">ASUS</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../Catalogo/catalogoWeb.html">EVGA</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../Catalogo/catalogoWeb.html">HYPERX</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../Catalogo/catalogoWeb.html">AMD</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../Catalogo/catalogoWeb.html">INTEL</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../Catalogo/catalogoWeb.html">HP</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../Catalogo/catalogoWeb.html">LOGITECH</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../Catalogo/catalogoWeb.html">CORSAIR</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../Catalogo/catalogoWeb.html">SAMSUNG</a></li>
+          </ul>
+        </li>
+       
+        <li class="nav-item5 dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Acerca de Nosotros
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="../VisionMision/visionMision.html">Visión y Misión</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../ContactoUbi/contacUbi.html">Contacto y Ubicicación</a></li>
+          </ul>
+        </li>
+      </ul>
+    
+    </div>
+  </div>
+</nav>
+
+
+<hr style="margin-top: 0;">
+
+        <div class="container p-3">
+          <h2 class="text-center" style="font-size: 35px;"><b>Detalle del Producto</b></h2>
+          <hr>
+          <div class="conteinerCuerpo1">
+            <div class="subContainDe2 row">
+              <div class="col col-lg-6  col-sm-12 cajaImg ">
+                <div class="con-img">
+                   <img class="imgG" src="https://drive.google.com/uc?export=download&id=17lMqCgxf_U6lnZQVV9NXDtKgLWvYQr1h" alt="">
+                </div>
+                <div class="row agrup">
+                  <div class="col col-lg-4 img1"> <img class="img2" src="https://drive.google.com/uc?export=download&id=1StNZCplnCmj1AhsOsSfYwrkAzrcDhhtk" alt=""></div>
+                  <div class="col col-lg-4 img1"> <img  class="img2" src="https://drive.google.com/uc?export=download&id=1LZ65e_CbaGrh9TEDBi3ENFwfaDxttdUt" alt=""></div>
+                  <div class="col col-lg-4 img1"> <img  class="img2" src="https://drive.google.com/uc?export=download&id=1E6W80UFF99q0un3DGjFgllRXGZLinkQ-" alt=""></div>
+                </div>
+              </div>
+              <div class="col col-lg-6 col-sm-12 cajaProduct">
+                <div class="row">
+                  <h1 itemprop="name" class="product_title entry-title">TARJ. VIDEO GIGABYTE GEFORCE GTX 1660 6GB GDDR5 ( GV-N1660OC-6GD ) 192 BIT</h1>
+                 <div class="woocommerce-product-rating d-flex">
+                  <div class="star-rating" > <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                  <a href="#idValoracion">
+
+                   ( <span itemprop="reviewCount" class="count">5  Reseñas</span>
+                   )</a>
+                 </div>
+        
+                </div>
+        
+                <div class="row ">
+        
+                  <h1 itemprop="name" class="precioProductoSinTarjeta"><b>S/ 1783.87</b> </h1>
+                  <div class="subT">Pagando con Tarjeta (+5%)</div>
+                  <h1 itemprop="name" class="precioProductoTarjeta"><b>S/ 1877.76</b></h1>
+                  <div class="subT">Precio incluye IGV</div>
+                </div>
+                <div class="row">
+                  <div class="btnAñadirIncremento">
+                    <div class="quantity d-flex">
+                      <div  class="menos  text-center"><b>-</b></div>
+                      <input type="number" name="quantity" value="1" title="Qty" class="input-text qty text" />
+                      <div class="mas text-center"><b>+</b></div>
+                    </div>
+                    <div class="grupoBTN d-flex">
+                      <div class="btnNAñadir">
+                        <button type="submit" class="button btn-add">Añadir Carrito</button>
+                      </div>
+                      <div class="btnComprarAhora">
+                        <button type="submit" class="button btn-add">Comprar Ahora</button>
+                      </div>
+                    </div>
+  
+                    <div style="padding-top:15px ;" >
+                      <h1 style="font-size:25px ;">Mas Información</h1>
+                      <hr>
+                      <div class="button btn-add text-center ">
+                        <a style="text-decoration: none; cursor: pointer; color: #fff;"  href="../ContactoUbi/contacUbi.html">Contactar</a>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                
+              </div>
+        
+            </div>
+        
+          </div>
+          <div class="row description">
+            <h4 class="text-center" style="font-size: 35px;"><b>Detalles de Producto</b></h4>
+            <hr>
+            <p>
+            <div>
+              <table class="table">
+                <thead>
+                 
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><b>Marca:</b></td>
+                    <td>Gigabyte</td>
+                  </tr>
+                  <tr>
+                    <td><b>Modelo:</b></td>
+                    <td>GV-N1660OC-6GD</td>
+                  </tr>
+                  <tr>
+                    <td><b>Memoria:</b></td>
+                    <td>192 BIT</td>
+                  </tr>
+                  <tr>
+                    <td><b>Velocidad de reloj de memoria:</b></td>
+                    <td>7680x4320</td>
+                  </tr>
+                  <tr>
+                    <td><b>Bus:</b></td>
+                    <td>DisplayPort 1.4 x 3 - HDMI 2.0b</td>
+                  </tr>
+                  <tr>
+                    <td><b>Velocidad de reloj de GPU:</b></td>
+                    <td>6GB GDDR5</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .description -->
+            </p>
+          </div>
+          <div class="row ">
+            <h3><b>Productos De La Misma Categoria</b></h3>
+            <hr>
+            <div class="productos-recomendados contenedor">
+              <div class="contenedor-principal">
+                <button role="button" id="flecha-izquierda" class="flecha-izquierda" ><i class="fa-solid fa-angle-left"></i></button>
+                <div class="contenedor-carousel">
+                 <div class="carousel-products">
+                  <div class="producto"> 
+                    <button class="btn-ver" onclick="pPagina()">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <div class="cont-img">
+                      <img class="item-image" src="https://drive.google.com/uc?export=download&id=17lMqCgxf_U6lnZQVV9NXDtKgLWvYQr1h" alt="">
+                    </div>
+                    <div class="cont-info">
+                      <h3 class="title">TARJ. VIDEO GIGABYTE GEFORCE GTX 1660 6GB GDDR5 ( GV-N1660OC-6GD ) 192 BIT</h3>
+                      <p class="s-codigo">COGIGO: <span class="codigo">08927</span></p>
+                      <p class="s-stock">STOCK: <span class="stock">15</span></p> 
+                                        
+                      <div class="producto-price">
+                        <span class="s-precio">s/<span class="precio">1877.76</span></span>
+                      </div> 
+                    </div>
+                    <button class="btn-add-cart" data-id="1" data-bs-toggle="modal" data-bs-target="#exampleModal2">Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
+                    
+                  </div>
+                  <div class="producto"> 
+                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <div class="cont-img">
+                      <img class="item-image" src="https://drive.google.com/uc?export=download&id=1fkBUN5gNQRFhs2FN5pj40z0Ur8TNsXzP" alt="">
+                    </div>
+                    <div class="cont-info">
+                      <h3 class="title">LAPTOP LENOVO THINKBOOK 15 G2 ITL 15.6" FHD |I7-1165G7| 8GB DDR4| WIN 10PRO</h3>
+                      <p class="s-codigo">COGIGO: <span class="codigo">15415</span></p>
+                      <p class="s-stock">STOCK: <span class="stock">10</span></p> 
+                                        
+                      <div class="producto-price">
+                        <span class="s-precio">s/<span class="precio">5558.79</span></span>
+                      </div> 
+                    </div>
+                    <button class="btn-add-cart" data-id="2" data-bs-toggle="modal" data-bs-target="#exampleModal2" >Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
+                    
+                  </div>
+                  <div class="producto"> 
+                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <div class="cont-img">
+                      <img class="item-image" src="https://drive.google.com/uc?export=download&id=1BTmYUuDNZZfHoENVOMAxIR1XGbZf4T1k" alt="">
+                    </div>
+                    <div class="cont-info">
+                      <h3 class="title">PROC. INTEL CORE I7 12700KF ( BX8071512700KF ) 3.6GHZ-25MB | LGA 1700 | S/ COOLE</h3>
+                      <p class="s-codigo">COGIGO: <span class="codigo">13529</span></p>
+                      <p class="s-stock">STOCK: <span class="stock">8</span></p> 
+                                        
+                      <div class="producto-price">
+                        <span class="s-precio">s/<span class="precio">1786.89</span></span>
+                      </div> 
+                    </div>
+                    <button class="btn-add-cart" data-id="3" data-bs-toggle="modal" data-bs-target="#exampleModal2">Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
+                    
+                  </div>
+                  <div class="producto"> 
+                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <div class="cont-img">
+                      <img class="item-image" src="https://drive.google.com/uc?export=download&id=1THN5MpPPvoNYOW4jiChAgoedNGsQTC2s" alt="">
+                    </div>
+                    <div class="cont-info">
+                      <h3 class="title">PROC. AMD RYZEN 7 3800XT ( 100-100000279WOF ) 3.9GHZ-36MB | AM4</h3>
+                      <p class="s-codigo">COGIGO: <span class="codigo">11446</span></p>
+                      <p class="s-stock">STOCK: <span class="stock">13</span></p> 
+                                        
+                      <div class="producto-price">
+                        <span class="s-precio">s/<span class="precio">1215.39</span></span>
+                      </div> 
+                    </div>
+                    <button class="btn-add-cart" data-id="4" data-bs-toggle="modal" data-bs-target="#exampleModal2">Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
+                    
+                  </div>
+                  <div class="producto"> 
+                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <div class="cont-img">
+                      <img class="item-image" src="https://drive.google.com/uc?export=download&id=1cPQnOawtYJdrhNmKuuLQTCJzADp-dtT_" alt="">
+                    </div>
+                    <div class="cont-info">
+                      <h3 class="title">PROC. INTEL CORE I9 12900K ( BX8071512900K ) 3.2GHZ-30MB | LGA 1700 | S/ COOLER</h3>
+                      <p class="s-codigo">COGIGO: <span class="codigo">15407</span></p>
+                      <p class="s-stock">STOCK: <span class="stock">10</span></p> 
+                                        
+                      <div class="producto-price">
+                        <span class="s-precio">s/<span class="precio">2548.89</span></span>
+                      </div> 
+                    </div>
+                    <button class="btn-add-cart" data-id="5" data-bs-toggle="modal" data-bs-target="#exampleModal2">Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
+                    
+                  </div>
+                  <div class="producto"> 
+                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <div class="cont-img">
+                      <img class="item-image" src="https://drive.google.com/uc?export=download&id=1sBBq3dJNm25iULF1ugPFp1UgVqAJFniS" alt="">
+                    </div>
+                    <div class="cont-info">
+                      <h3 class="title">PROC. INTEL CORE I5 12600KF ( BX8071512600KF ) 3.7GHZ-20MB | LGA 1700 | S/ COOLER</h3>
+                      <p class="s-codigo">COGIGO: <span class="codigo">13573</span></p>
+                      <p class="s-stock">STOCK: <span class="stock">15</span></p> 
+                                        
+                      <div class="producto-price">
+                        <span class="s-precio">s/<span class="precio">1253.49</span></span>
+                      </div> 
+                    </div>
+                    <button class="btn-add-cart" data-id="6" data-bs-toggle="modal" data-bs-target="#exampleModal2">Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
+                    
+                  </div>
+                  <div class="producto"> 
+                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <div class="cont-img">
+                      <img class="item-image" src="https://drive.google.com/uc?export=download&id=1WIkvkY6xwo0SNK0_RxDMcMfQhELrZp4k" alt="">
+                    </div>
+                    <div class="cont-info">
+                      <h3 class="title">MONITOR HUAWEI DISPLAY 23.8" ( AD80HW ) | FHD | HDMI - VGA | IPS | 5MS | 60HZ |</h3>
+                      <p class="s-codigo">COGIGO: <span class="codigo">13422</span></p>
+                      <p class="s-stock">STOCK: <span class="stock">12</span></p> 
+                                        
+                      <div class="producto-price">
+                        <span class="s-precio">s/<span class="precio">560.07</span></span>
+                      </div> 
+                    </div>
+                    <button class="btn-add-cart" data-id="7" data-bs-toggle="modal" data-bs-target="#exampleModal2">Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
+                    
+                  </div>
+                  <div class="producto"> 
+                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <div class="cont-img">
+                      <img class="item-image" src="https://drive.google.com/uc?export=download&id=1HErHPqvS_khluStwmOH6a_q9YSszGSl-" alt="">
+                    </div>
+                    <div class="cont-info">
+                      <h3 class="title">TARJ. VIDEO MSI GEFORCE RTX 3080TI 12GB GDDR6X ( 912-V389-058 ) GAMING X TRIO 12G</h3>
+                      <p class="s-codigo">COGIGO: <span class="codigo">13264</span></p>
+                      <p class="s-stock">STOCK: <span class="stock">7</span></p> 
+                                        
+                      <div class="producto-price">
+                        <span class="s-precio">s/<span class="precio">7100.16</span></span>
+                      </div> 
+                    </div>
+                    <button class="btn-add-cart" data-id="8" data-bs-toggle="modal" data-bs-target="#exampleModal2">Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
+                    
+                  </div>
+                  <div class="producto"> 
+                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <div class="cont-img">
+                      <img class="item-image" src="https://drive.google.com/uc?export=download&id=1jK3LdqotJaF2acmjNxZIuR0lDn7O8aek" alt="">
+                    </div>
+                    <div class="cont-info">
+                      <h3 class="title">HDD LAPTOP WESTER DIGITAL 1TB ( WD10SPZX ) AZUL | 128MB | 5400RPM</h3>
+                      <p class="s-codigo">COGIGO: <span class="codigo">06030</span></p>
+                      <p class="s-stock">STOCK: <span class="stock">10</span></p> 
+                                        
+                      <div class="producto-price">
+                        <span class="s-precio">s/<span class="precio">188.60</span></span>
+                      </div> 
+                    </div>
+                    <button class="btn-add-cart" data-id="9" data-bs-toggle="modal" data-bs-target="#exampleModal2">Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
+                    
+                  </div>
+                  <div class="producto"> 
+                    <button class="btn-ver">Ver Producto <i class="fa-solid fa-eye"></i></button>
+                    <div class="cont-img">
+                      <img class="item-image" src="https://drive.google.com/uc?export=download&id=1iyhon-JSd5l0D3IIIJZwibpnBWcGtKVa" alt="">
+                    </div>
+                    <div class="cont-info">
+                      <h3 class="title">SISTEMA DE ENFRIAMIENTO LIQUIDO NZXT KRAKEN X63 ( RL-KRX63-01 ) 280MM | LED- RGB</h3>
+                      <p class="s-codigo">COGIGO: <span class="codigo">14170</span></p>
+                      <p class="s-stock">STOCK: <span class="stock">8</span></p> 
+                                        
+                      <div class="producto-price">
+                        <span class="s-precio">s/<span class="precio">769.62</span></span>
+                      </div> 
+                    </div>
+                    <button class="btn-add-cart" data-id="10" data-bs-toggle="modal" data-bs-target="#exampleModal2">Añadir Carrito <i class="fa-solid fa-cart-plus"></i></button>
+                    
+                  </div>
+                 </div>
+                </div>
+                <button role="button" id="flecha-derecha" class="flecha-derecha" ><i class="fa-solid fa-angle-right"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="row valoracion" >
+            <h4 class="text-center" style="font-size: 35px;"><b>Valoración Del Producto:</b> </h4>
+              <hr>
+                <div class="contVal">
+                  <div class="userEstrellas">
+                    <div class="star-rating"></div>
+                    <div>Usuario </div>
+                    <hr>
+                  </div>
+                  <p style="text-align: justify;">
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quam dolore recusandae hic! Magni exercitationem velit perferendis in repellendus quos debitis cum enim, repellat deleniti voluptates? Culpa sapiente eaque quos.
+                   Excepturi ipsum voluptatum quisquam cum odio ullam distinctio, earum hic autem natus dolores nihil, nostrum optio doloremque voluptatem vel unde numquam! Illo minima non velit cumque explicabo architecto odit recusandae.
+                   Temporibus ipsa cumque ipsam. Quo, doloribus! Voluptate, maiores rem repudiandae quidem nihil fugit consequatur illum eaque maxime aliquam quas mollitia quisquam deleniti vero veniam itaque id quos perferendis atque accusamus!
+                   Nesciunt animi accusantium reiciendis libero, porro consequuntur vel aliquid dolores voluptatibus dolor iste, ex iusto maiores quas inventore quos, eaque officiis vero in totam dolorem et. Repellat praesentium alias quae.
+                   Consequuntur dicta optio ducimus dolor totam doloribus suscipit quasi. Modi ipsam in perspiciatis quam natus vitae, quidem unde vel fugiat expedita.
+                    <a href="#">Ver Mas</a>
+                  </p>
+                </div>
+        
+          </div>
+        
+        
+        </div>
+        
+        <footer class="text-white text-center text-lg-start bg-dark">
+       
+          <div class="container p-4">
+        
+            <div class="row mt-4">
+              
+              <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">ACERCA DE NOSOTROS</h5>
+      
+                <p>
+                  Snail es una empresa que se dedica a la venta online de una amplia gama de productos de calidad de electrónica en Lambayeque - Chiclayo.
+                </p>
+      
+                
+              </div>
+            
+      
+             
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4 pb-1">MEDIOS DE PAGO</h5>
+    
+                <div class="mt-4">
+                 
+                  <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fa-brands fa-cc-visa"></i></a>
+                
+                  <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fa-brands fa-cc-mastercard"></i></a>
+                 
+                  <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fa-brands fa-paypal"></i></a>
+                  
+                  <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fa-solid fa-money-bill-1"></i></a>
+                 
+                  <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fa-brands fa-cc-amex"></i></a>
+                </div>
+              </div>
+              
+             
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">CONTACTANOS</h5>
+      
+                <div class="mt-4">
+                  
+                  <a type="button" class="btn btn-floating1 btn-light btn-lg"><i class="fab fa-facebook-f"></i></a>
+                  
+                  <a type="button" class="btn btn-floating2 btn-light btn-lg"><i class="fa-brands fa-instagram"></i></a>
+                 
+                  <a type="button" class="btn btn-floating3 btn-light btn-lg"><i class="fab fa-twitter"></i></a>
+                  
+                  <a type="button" class="btn btn-floating4 btn-light btn-lg"><i class="fa-brands fa-whatsapp"></i></a>
+                  
+                </div>
+              </div>
+             
+            </div>
+            
+          </div>
+          
+      
+         
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Web Master:
+            <a class="text-white" href="">Grupo 04 </a> <br>
+            Ultima Actualización: 03/07/2022
+          </div>
+      
+    </footer>
+  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/producto.js"></script>
+    <script src="https://kit.fontawesome.com/0ea696cd02.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/sweetAlert.js"></script>
+</body>
+</html>
