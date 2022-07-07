@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/iconoWEB.png">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/opcionesPago.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Snail Store</title>
+</head>
+<body>
+    
+        <header class="container d-flex align-items-center">
+            <div class="logo">
+                <a href="../index.html"><img src="../img/LogoF.png" alt=""></a>
+            </div>
+            <div class="buscador">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </form>
+            </div>
+            <div class="iniciarSesion">
+                <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+                <div class="sesion" id="sesio-id" >
+                    <p class="close-btn" onclick="closeBtn()" >X</p>
+                    
+                    <div class="email">
+                        <form class="container-fluid">
+                            <div class="input-group">
+                              <span class="input-group-text" id="basic-addon1">@</span>
+                              <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                          </form>
+                    </div>
+                    
+                    <div class="contrasena">
+                        <form class="container-fluid">
+                            <div class="input-group">
+                              <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
+                              <input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <a data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modalFormResetPassword" class="btn btn-link pr-0 float-right">
+                        ¿Olvidaste tu contraseña?
+                    </a>
+                    <div class="boton">
+                        <button type="button" class="btn btn-outline-dark">Iniciar Sesión</button>
+                    </div>
+                    <h2>O conectate a travez de:</h2>
+                    <div class="card-icons">
+                      <div class="iconsF">
+                       <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+                      </div>
+                      <div class="iconsG">
+                       <a href="#"> <i class="fa-brands fa-google"></i></a>
+                      </div>
+                    </div>
+                    <a href="../Register/registrar.html" class="register">
+                        ¿Eres Nuevo? , Registrate Aqui!
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="submenu">
+                <a href="#" onmouseover="showCart(this)" id="butt"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p class="count-product">0</p>
+                <div class="cart-products" id="products-id" >
+                    <p class="close-btn" onclick="closeBtn()" >X</p>
+                    <h3>Mi carrito</h3>
+                    <div class="card-items">
+                      <div class="item">
+                      </div>
+                    </div>
+                    <h2>Total: S/ <strong class="price-total">0</strong></h2>
+                    <div class="botoncarrito">
+                      <a href="../carrito/carritoWeb.html">Ver Carrito</a>
+                     </div>
+                </div>
+            </div>
+        </header>
+        <hr style="margin: 0;">
+        <nav class="container navbar navbar-expand-lg">
+          <div class="container-fluid">
+            
+            <a class="navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li class="nav-item dropdown">
+                  <div class="caja">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-bars"></i>
+                      Todos las Categorias
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#"><img src="../img/procesador.png" alt=""> PROCESADOR <i class="fas fa-caret-right"></i></a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><img src="../img/tarjeta-madre.png" alt=""> PLACA MADRE <i class="fas fa-caret-right"></i></a></i></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><img src="../img/disco-duro-externo.png" alt=""> MEMORIA Y ALMACENAMIENTO <i class="fas fa-caret-right"></i></a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><img src="../img/carta-grafica.png" alt=""> TARJETA DE VIDEO<i class="fas fa-caret-right"></i></a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><img src="../img/tarjeta-de-sonido.png" alt=""> TARJETA DE SONIDO <i class="fas fa-caret-right"></i></a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><img src="../img/tarjeta-de-interfaz-de-red.png" alt=""> TARJETA DE RED <i class="fas fa-caret-right"></i></a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><img src="../img/ordenador-portatil.png" alt=""> LAPTOP <i class="fas fa-caret-right"></i></a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><img src="../img/water-cooler.png" alt=""> COOLER <i class="fas fa-caret-right"></i></a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><img src="../img/fuente-de-alimentacion.png" alt=""> FUENTE DE PODER <i class="fas fa-caret-right"></i></a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><img src="../img/torre-de-la-cpu.png" alt=""> CASE <i class="fas fa-caret-right"></i></a></li>
+          
+                      </ul>
+                  </div>
+                   
+                </li>
+                <li class="nav-item1">
+                  <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item2">
+                  <a class="nav-link" href="../Catalogo/catalogoWeb.html">Catalogo</a>
+                </li>
+                <li class="nav-item3">
+                  <a class="nav-link" href="../OfertaDia/ofertaDia.html">Ofertas del Día</a>
+                </li>
+                <li class="nav-item4 dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Marcas
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">MSI</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">ASUS</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">EVGA</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">HYPERX</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">AMD</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">INTEL</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">HP</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">LOGITECH</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">CORSAIR</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">SAMSUNG</a></li>
+                  </ul>
+                </li>
+               
+                <li class="nav-item5 dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Acerca de Nosotros
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="../VisionMision/visionMision.html">Visión y Misión</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="../ContactoUbi/contacUbi.html">Contacto y Ubicicación</a></li>
+                  </ul>
+                </li>
+              </ul>
+            
+            </div>
+          </div>
+        </nav>
+        <hr style="margin: 0;">
+        <div class="container">
+          <div class="row d-flex sector m-2">
+            <div class="col-lg-4 text-center">
+              1. Carrito
+              <div class="circulos d_1"></div>
+            </div>
+            <div class="col-lg-4 text-center">
+              2. Datos de envío
+              <div class="circulos d_2"></div>
+            </div>
+            <div class="col-lg-4 text-center">
+              3. Opciones de envío
+              <div class="circulos d_3"></div>            
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="row text-center">
+              <h1><span>Opciones de Pago</span></h1>
+            </div>
+            <section class="col-md-6 col-sm-8">
+             
+              <fieldset id="medioPago">
+                <legend>Medio de pago</legend>
+                <div style="border: black 2px solid;">
+                  <input type="radio" name="medioPag" value="tarjeta" onclick="toggle(this)">
+                  <img src="../OfertaDia/img/visa.png" alt="visa">
+                  <img src="../OfertaDia/img/masterCard.png" alt="masterCard">
+                  <img src="../OfertaDia/img/americanExpress.jpg" alt="americanExpress">
+                  <img src="../OfertaDia/img/dinersClub.png" alt="dinersClub">
+                </div>
+                <br>
+        
+                <div style="border: black 2px solid;">
+                  <input type="radio" name="medioPag" value="Paypal" onclick="toggle(this)">
+                  <img src="../OfertaDia/img/payPal.png" alt="payPal">
+                </div>
+                <br>
+        
+                <div style="border: black 2px solid;">
+                  <input type="radio" name="medioPag" value="pagEfectivo" onclick="toggle(this)">
+                  <img src="../OfertaDia/img/pagoEfectivo.png" alt="pagoEfectivo">
+                </div>
+        
+                <br>
+              </fieldset>
+              <div id="div" style="display: none;">
+                <fieldset>
+                  <legend>Datos de la tarjeta</legend>
+                  <input type="text" name="numeroTarjeta" id="numTarjeta" placeholder="Número de la tarjeta" maxlength="20">
+                  <br>
+                  <input type="text" name="nombreTitular" id="nomTitular" placeholder="Nombre del Titular">
+                  <input type="text" name="apellidoTitular" id="apeTitular" placeholder="Apellido del Titular">
+                  <br>
+                  <input type="text" name="codigoSeguridad" id="codSeguridad" placeholder="Código de Seguridad" maxlength="3">
+                  <label for="">Fecha de caducidad:</label>
+                  <select name="fechaMes" id="mes">
+                    <option selected="selected">MM</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                  </select>
+                  <select name="fechaMes" id="mes">
+                    <option selected="selected">YY</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                  </select>
+                  <hr>
+                  <input type="checkbox">Guardar esta tarjeta.
+                  <br>
+                  <i class="fa-solid fa-user-shield"></i>Tu Información esta segura con nosotros.
+                </fieldset>
+              </div>
+        
+        
+            </section>
+            <aside class="col-md-6 col-sm-8">
+              <div>
+                <h5>Datos de la entrega</h5>
+                <hr>
+                <div id="resumenCliente">
+
+                </div>
+              </div>
+              <a href="#" class="btn" onclick="modal_02(),eliminar()" id="regresarCarrito">Regresar Inicio</a>
+          
+              <a href="#" class="btn" id="Continuar" onclick="modal_01(),eliminar()">Finalizar Compra</a>
+            </aside>
+        
+        
+          </div>
+        </div>
+      
+      
+      
+      
+        <footer class="text-white text-center text-lg-start bg-dark">
+          <!-- Grid container -->
+          <div class="container p-4">
+            <!--Grid row-->
+            <div class="row mt-1">
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4"><a href="#">POLÍTICA DE REMBOLSO</a></h5>             
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4 pb-1"><a href="#">POLÍTICA DE PRIVACIDAD</a></h5>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4"><a href="#">TÉRMINOS DE SERVICIO</a></h5>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+          <!-- Grid container -->
+      
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="#"> Grupo 04</a>
+          </div>
+         
+    </footer>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/opcionesPago.js"></script>
+    <script src="https://kit.fontawesome.com/0ea696cd02.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JS/sweetAlert.js"></script>
+
+</body>
+</html>

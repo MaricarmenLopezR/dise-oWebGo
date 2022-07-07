@@ -1,8 +1,8 @@
 function modal_01() {
     Swal.fire({
         icon: 'success',
-        title: 'Registro finalizada',
-        text: "Se ah registrado con éxito!",
+        title: 'Inicio finalizada',
+        text: "Se ah iniciado sesión con éxito!",
         showConfirmButton: true,
         confirmButtonText: '<a style="color: white; text-decoration: none;" class="inicio" href="#">Aceptar</a>',
         confirmButtonColor: '#3085d6',
@@ -21,4 +21,31 @@ function modal_02() {
         confirmButtonColor: '#3085d6',
         allowOutsideClick: false
     });    
+}
+
+
+function modal_03() {
+    Swal.fire({
+        icon: 'success',
+        title: 'Codigó Añadido',
+        text: "Se ha usado el codigó en su compra!",
+        showConfirmButton: true,
+        confirmButtonText: '<a style="color: white; text-decoration: none;" class="inicio" href="#">Aceptar</a>',
+        confirmButtonColor: '#3085d6',
+        allowOutsideClick: false
+    });    
+}
+
+function modal_04() {  
+    Swal.fire({
+        title: 'Advertencia',
+        text: "Se perderá todos los datos!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: '<a style="color: white; text-decoration: none; "  onclick="eliminarTodo()" class="inicio" href="../index.html">Regresar al inicio</a>',
+        cancelButtonText: 'Cancelar',
+        allowOutsideClick: false
+    });
 }
