@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos de colores</title>
+</head>
+<body>
+    <h1>Ingrese los colores con su posición</h1>
+    <p>Por favor escriba el nombre de tres colores en inglés con la
+        posición que desee mostrarlos.
+    </p>
+    <div class="form">
+        <label for="guessField">Color 1 :</label>
+        <input type="text" required class="nombre1">
+        <input type="number" min="1" max="3" required class="pos1">
+        <br>
+        <label for="guessField">Color 2 :</label>
+        <input type="text" required class="nombre2">
+        <input type="number" min="1" max="3" required class="pos2">
+        <br>
+        <label for="guessField">Color 3 :</label>
+        <input type="text" required class="nombre3">
+        <input type="number" min="1" max="3" required class="pos3">
+        <br>
+        <input type="submit" value="Dibujar" class="dibujarButton">
+    </div>
+    <div class="resultParas">
+        <p class="lienzo1" style="background-color: green;">.</p>
+        <p class="lienzo1" style="background-color: red;">.</p>
+        <p class="lienzo1" style="background-color: yellow;">.</p>
+    </div>
+
+    <script>
+        const dibujarBoton = document.querySelector('.dibujarButton');
+
+        const numPos1 = document.querySelector('.pos1');
+        const numPos2 = document.querySelector('.pos2');
+        const numPos3 = document.querySelector('.pos3');
+
+        const textNombre1 = document.querySelector('.nombre1');
+        const textNombre2 = document.querySelector('.nombre2');
+        const textNombre3 = document.querySelector('.nombre3');
+
+        const dibujarLienzo1 = document.querySelector('.lienzo1');
+        const dibujarLienzo2 = document.querySelector('.lienzo2');
+        const dibujarLienzo3 = document.querySelector('.lienzo3');
+
+        let resetButton;
+
+        function pintar() {
+            let nombreColor1= textNombre1.value;
+            let nombreColor2= textNombre2.value;
+            let nombreColor3= textNombre3.value;
+            let posicion1 = Number(numPos1.value);
+            let posicion2 = Number(numPos2.value);
+            let posicion3 = Number(numPos3.value);
+
+            var colores = [nombreColor1,nombreColor2,nombreColor3];
+            var posiciones=[posicion1,posicion2,posicion3];
+            var pinturas = document.querySelectorAll('.resultParas p');
+
+            for (let i = 0; i < colores.length; i++) {
+                pinturas[posiciones[i]-1].style.backgroundColor = colores[i];
+                pinturas[posiciones[i]-1].textContent = ".";
+                
+            }
+        }
+        dibujarBoton.addEventListener('click',pintar);
+
+    </script>
+
+</body>
+</html>

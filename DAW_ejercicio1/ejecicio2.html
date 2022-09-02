@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h1>Live output</h1>
+    <input type="number" required class="valores">
+    <input type="submit" value="Search" required class="boton">
+    <div class="listaComp">
+        <ul class="lista"></ul>
+    </div>
+
+    <script>
+        const list = document.querySelector('.lista');
+        const numero=document.querySelector('.valores');
+        const buscar=document.querySelector('.boton');
+
+        list.innerHTML='';
+        var historial=[];
+
+        function buscarHistorial() {
+            if (numero.value !=='') {
+                historial.unshift(numero.value);
+                list.innerHTML='';
+                for (let i = 0; i < historial.length; i++) {
+                    elem = historial[i];
+                    var intemHis = document.createElement('li');
+                    intemHis.textContent=elem;
+                    list.appendChild(intemHis);
+                }
+                if (historial.length >= 5) {
+                    historial.pop();
+                }
+                numero.value='';
+                numero.focus();
+            }
+        }
+//unshift agregar uno o mas elementos al inicio del array y devuelve la nueva longitu del array
+//pop eliminar el ultimo del array
+//focus enfocar el espacio de texto
+        buscar.addEventListener('click',buscarHistorial);
+    </script>
+</body>
+</html>
